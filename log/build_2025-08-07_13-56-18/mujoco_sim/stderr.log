@@ -1,0 +1,13 @@
+/usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `Ur5e_Node::run()':
+ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x29): undefined reference to `glfwInit'
+/usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x222): undefined reference to `glfwCreateWindow'
+/usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x40b): undefined reference to `glfwTerminate'
+/usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x426): undefined reference to `glfwMakeContextCurrent'
+/usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x430): undefined reference to `glfwSwapInterval'
+/usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x435): undefined reference to `glfwGetTime'
+/usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x448): undefined reference to `glfwGetTime'
+/usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_Node3runEv[_ZN9Ur5e_Node3runEv]+0x492): undefined reference to `glfwWindowShouldClose'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:185：ur5e_control] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

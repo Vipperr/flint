@@ -1,0 +1,29 @@
+[0.009s] Invoking command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[0.031s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.195s] -- Found rclcpp: 28.1.10 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.216s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.222s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.231s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.242s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.288s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.290s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.344s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.392s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.437s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.506s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.506s] -- Configured cppcheck include dirs: 
+[0.506s] -- Configured cppcheck exclude dirs and/or files: 
+[0.506s] -- Added test 'lint_cmake' to check CMake code style
+[0.506s] -- Added test 'uncrustify' to check C / C++ code style
+[0.507s] -- Configured uncrustify additional arguments: 
+[0.507s] -- Added test 'xmllint' to check XML markup files
+[0.507s] -- Configuring done (0.5s)
+[0.514s] -- Generating done (0.0s)
+[0.517s] -- Build files have been written to: /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim
+[0.561s] [ 50%] [32m[1mLinking CXX executable ur5e_control[0m
+[0.580s] /usr/bin/ld: 找不到 -lglfw3: 没有那个文件或目录
+[0.627s] collect2: error: ld returned 1 exit status
+[0.629s] gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:185：ur5e_control] 错误 1
+[0.629s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
+[0.630s] gmake: *** [Makefile:146：all] 错误 2
+[0.632s] Invoked command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24

@@ -1,0 +1,10 @@
+[0.010s] Invoking command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[0.074s] [ 50%] [32mBuilding CXX object CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o[0m
+[0.229s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/joint_state.hpp: 没有那个文件或目录
+[0.229s]     4 | #include [01;31m[K<sensor_msgs/msg/joint_state.hpp>[m[K
+[0.229s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.229s] compilation terminated.
+[0.234s] gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:76：CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o] 错误 1
+[0.234s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
+[0.235s] gmake: *** [Makefile:146：all] 错误 2
+[0.237s] Invoked command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24

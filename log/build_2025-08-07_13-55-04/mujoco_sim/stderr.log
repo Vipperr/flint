@@ -1,0 +1,18 @@
+[31mCMake Error at CMakeLists.txt:19 (find_package):
+  By not providing "Findglfw.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "glfw", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "glfw" with any of
+  the following names:
+
+    glfwConfig.cmake
+    glfw-config.cmake
+
+  Add the installation prefix of "glfw" to CMAKE_PREFIX_PATH or set
+  "glfw_DIR" to a directory containing one of the above files.  If "glfw"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+[0m
+gmake: *** [Makefile:267：cmake_check_build_system] 错误 1

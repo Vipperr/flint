@@ -1,0 +1,39 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o[0m
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:173:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::bottom[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+  173 |         mjrRect rect_ = {0[01;35m[K}[m[K;
+      |                           [01;35m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:173:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:173:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In constructor ‘[01m[KUr5e_Node::[01;32m[KUr5e_Node[m[K(std::string)[m[K’:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:33:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   33 |             for (int i = 0; [01;35m[Ki < joint_names.size()[m[K; i++)
+      |                             [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+                 from [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:1[m[K:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Krun[m[K()[m[K’:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:83:44:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[KmjtNum {aka double}[int][m[K’ for array subscript
+   83 |                         model_->stat.extent[01;31m[K[[m[K0], model_->stat.extent[1],
+      |                                            [01;31m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:83:68:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[KmjtNum {aka double}[int][m[K’ for array subscript
+   83 |                         model_->stat.extent[0], model_->stat.extent[01;31m[K[[m[K1],
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:84:44:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[KmjtNum {aka double}[int][m[K’ for array subscript
+   84 |                         model_->stat.extent[01;31m[K[[m[K2], model_->stat.extent[3],
+      |                                            [01;31m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:84:68:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[KmjtNum {aka double}[int][m[K’ for array subscript
+   84 |                         model_->stat.extent[2], model_->stat.extent[01;31m[K[[m[K3],
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:85:44:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[KmjtNum {aka double}[int][m[K’ for array subscript
+   85 |                         model_->stat.extent[01;31m[K[[m[K4], model_->stat.extent[5]);
+      |                                            [01;31m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:85:68:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[KmjtNum {aka double}[int][m[K’ for array subscript
+   85 |                         model_->stat.extent[4], model_->stat.extent[01;31m[K[[m[K5]);
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:93:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   93 |                 double [01;35m[Kdt[m[K = now - last_update;
+      |                        [01;35m[K^~[m[K
+gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:76：CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

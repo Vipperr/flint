@@ -1,0 +1,31 @@
+[0.010s] Invoking command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[0.033s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.196s] -- Found rclcpp: 28.1.10 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.217s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.223s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.232s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.243s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.288s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.291s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.345s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.393s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.448s] [31mCMake Error at CMakeLists.txt:19 (find_package):
+[0.448s]   By not providing "Findglfw.cmake" in CMAKE_MODULE_PATH this project has
+[0.448s]   asked CMake to find a package configuration file provided by "glfw", but
+[0.448s]   CMake did not find one.
+[0.448s] 
+[0.448s]   Could not find a package configuration file provided by "glfw" with any of
+[0.448s]   the following names:
+[0.448s] 
+[0.448s]     glfwConfig.cmake
+[0.448s]     glfw-config.cmake
+[0.448s] 
+[0.448s]   Add the installation prefix of "glfw" to CMAKE_PREFIX_PATH or set
+[0.448s]   "glfw_DIR" to a directory containing one of the above files.  If "glfw"
+[0.448s]   provides a separate development package or SDK, be sure it has been
+[0.448s]   installed.
+[0.448s] 
+[0.448s] [0m
+[0.448s] -- Configuring incomplete, errors occurred!
+[0.453s] gmake: *** [Makefile:267：cmake_check_build_system] 错误 1
+[0.455s] Invoked command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24
