@@ -27,8 +27,15 @@ class Ur5e_Node : public rclcpp::Node
             model_->opt.gravity[2] = -9.81;
 
             // 初始化位置到初始状态
-            std::vector<std::string> joint_names = {
+            joint_names = {
                 "joint1", "joint2", "joint3", "joint4", "joint5", "joint6"
+            };
+
+            // 控制器回调函数注册
+            data_->userdata = (mjtNum*)this;
+            mjcb_control = [](const mjModel* m, mjData* d) {
+                auto* self = (Ur5e_Node*)(d->userdata);
+                self->apply_position_control();
             };
 
             for (int i = 0; i < joint_names.size(); i++)
@@ -67,6 +74,7 @@ class Ur5e_Node : public rclcpp::Node
             }
 
             window_ = glfwCreateWindow(1200, 900, "UR5e Simulation", NULL, NULL);
+            glfwSetWindowUserPointer(window_, this);
             if (!window_) 
             {
                 RCLCPP_ERROR(get_logger(), "无法创建GLFW窗口");
@@ -84,6 +92,13 @@ class Ur5e_Node : public rclcpp::Node
             // 初始化扰动器
             mjv_defaultPerturb(&pert);
 
+            // 注册回调函数
+            auto keyboard = [](GLFWwindow* window, int key, int scancode, int act, int mods) {
+                auto* self = static_cast<Ur5e_Node*>(glfwGetWindowUserPointer(window));
+                self->keyboard(window, key, scancode, act, mods);
+            };
+            glfwSetKeyCallback(window_, keyboard);
+
             // 主仿真循环
             double last_update = glfwGetTime();
             while (!glfwWindowShouldClose(window_))
@@ -92,21 +107,13 @@ class Ur5e_Node : public rclcpp::Node
                 double now = glfwGetTime();
                 double dt = now - last_update;
                 last_update = now;
-
+                // RCLCPP_INFO(get_logger(), "dt : %f", dt);
+                
                 // 物理仿真步进
                 mj_step(model_, data_);
 
                 // 渲染
                 render_frame(&scn, &con, &cam);
-
-                // 限帧率为500Hz
-                double elapsed = glfwGetTime() - now;
-                if (elapsed < 0.002) 
-                {
-                    std::this_thread::sleep_for(
-                        std::chrono::milliseconds(static_cast<int>((0.002 - elapsed) * 1000))
-                    );
-                }
             }
 
             // 关闭glfw
@@ -114,6 +121,30 @@ class Ur5e_Node : public rclcpp::Node
             // 清理渲染资源
             mjr_freeContext(&con);
             mjv_freeScene(&scn);
+        }
+
+        void apply_position_control() 
+        {
+            // 位置控制器
+            for (auto& [joint_id, target] : target_positions_) 
+            {
+                int qposadr = model_->jnt_qposadr[joint_id];
+                int dofadr = model_->jnt_dofadr[joint_id];
+                
+                double current_pos = data_->qpos[qposadr];
+                double error = target - current_pos;
+                
+                // PD控制器
+                double kp = 30.0;  // 比例增益
+                double kd = 0.0;   // 微分增益
+                
+                double velocity = data_->qvel[dofadr];
+                double target_vel = target_velocities_[joint_id];
+                double force = kp * error + kd * (target_vel - velocity);
+                
+                // 应用力到执行器
+                data_->ctrl[joint_id] = force;
+            }
         }
 
         void init_rendering(mjvScene* scn, mjrContext* con, mjvCamera* cam) 
@@ -157,15 +188,34 @@ class Ur5e_Node : public rclcpp::Node
             glfwPollEvents();
         }
 
+        void keyboard(GLFWwindow* window, int key, int scancode, int act, int mods) 
+        {
+            if (act==GLFW_PRESS && key==GLFW_KEY_BACKSPACE) 
+            {
+                mj_resetData(model_, data_);
+                mj_forward(model_, data_);
+            }
+        }
+
+        // 鼠标按键回调
+        void mouse_button(GLFWwindow* window, int button, int act, int mods) 
+        {
+            // update button state
+            button_left = (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT)==GLFW_PRESS);
+            button_middle = (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE)==GLFW_PRESS);
+            button_right = (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT)==GLFW_PRESS);
+
+            // update mouse position
+            glfwGetCursorPos(window, &lastx, &lasty);
+        }
+
 
     private:
         mjModel* model_ = nullptr;
         mjData* data_ = nullptr;
         GLFWwindow* window_ = nullptr;
 
-        // 控制变量
-        std::map<int, double> target_positions_;
-        std::map<int, double> target_velocities_;
+        std::vector<std::string> joint_names;
 
         // ROS 接口
         rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_pub_;
@@ -180,6 +230,17 @@ class Ur5e_Node : public rclcpp::Node
 
         // 渲染区域
         mjrRect rect_ = {0};
+
+        // 鼠标交互
+        bool button_left = false;
+        bool button_middle = false;
+        bool button_right =  false;
+        double lastx = 0;
+        double lasty = 0;
+
+        // 控制变量
+        std::map<int, double> target_positions_;
+        std::map<int, double> target_velocities_;
 };
 
 
