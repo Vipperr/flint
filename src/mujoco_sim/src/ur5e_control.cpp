@@ -25,6 +25,7 @@ class Ur5e_Node : public rclcpp::Node
 
             // 初始化仿真参数
             model_->opt.gravity[2] = -9.81;
+            force_scale = 5;
 
             // 初始化位置到初始状态
             joint_names = {
@@ -43,12 +44,18 @@ class Ur5e_Node : public rclcpp::Node
                 int joint_id = mj_name2id(model_, mjOBJ_JOINT, joint_names[i].c_str());
                 if (joint_id != -1) 
                 {
-                // 设置初始位置为0
+                    // 设置初始位置为0
                     data_->qpos[model_->jnt_qposadr[joint_id]] = 0.0;
                     
                     // 初始化控制目标值
-                    target_positions_[joint_id] = 0.0;
-                    target_velocities_[joint_id] = 0.0;
+                    target_positions_[i] = 0.0;
+                    target_velocities_[i] = 0.0;
+
+                    // 关节ID映射
+                    joint_id_map[i] = joint_id;
+
+                    qpos_adr_[i] = model_->jnt_qposadr[joint_id];
+                    qvel_adr_[i] = model_->jnt_dofadr[joint_id];
                 }
             }
 
@@ -91,13 +98,27 @@ class Ur5e_Node : public rclcpp::Node
 
             // 初始化扰动器
             mjv_defaultPerturb(&pert);
+            pert.active = mjPERT_TRANSLATE; // 激活扰动
+            pert.select = mj_name2id(model_, mjOBJ_BODY, "link6"); // 目标部位ID
+            mjv_initPerturb(model_, data_, &scn, &pert);
+            mjv_applyPerturbForce(model_, data_, &pert);
 
             // 注册回调函数
             auto keyboard = [](GLFWwindow* window, int key, int scancode, int act, int mods) {
                 auto* self = static_cast<Ur5e_Node*>(glfwGetWindowUserPointer(window));
                 self->keyboard(window, key, scancode, act, mods);
             };
+            auto mouse_button = [](GLFWwindow* window, int button, int act, int mods) {
+                auto* self = static_cast<Ur5e_Node*>(glfwGetWindowUserPointer(window));
+                self->mouse_button(window, button, act, mods);
+            };
+            auto mouse_move = [](GLFWwindow* window, double xpos, double ypos) {
+                auto* self = static_cast<Ur5e_Node*>(glfwGetWindowUserPointer(window));
+                self->mouse_move(window, xpos, ypos);
+            };
             glfwSetKeyCallback(window_, keyboard);
+            glfwSetMouseButtonCallback(window_, mouse_button);
+            glfwSetCursorPosCallback(window_, mouse_move);
 
             // 主仿真循环
             double last_update = glfwGetTime();
@@ -112,6 +133,10 @@ class Ur5e_Node : public rclcpp::Node
                 // 物理仿真步进
                 mj_step(model_, data_);
 
+                // RCLCPP_INFO(get_logger(), "施加扰动力");
+                // RCLCPP_INFO(get_logger(), "force_vector[0] %f", force_vector[0]);
+                // RCLCPP_INFO(get_logger(), "force_vector[1] %f", force_vector[1]);
+
                 // 渲染
                 render_frame(&scn, &con, &cam);
             }
@@ -125,26 +150,28 @@ class Ur5e_Node : public rclcpp::Node
 
         void apply_position_control() 
         {
-            // 位置控制器
-            for (auto& [joint_id, target] : target_positions_) 
-            {
-                int qposadr = model_->jnt_qposadr[joint_id];
-                int dofadr = model_->jnt_dofadr[joint_id];
-                
-                double current_pos = data_->qpos[qposadr];
-                double error = target - current_pos;
-                
-                // PD控制器
-                double kp = 30.0;  // 比例增益
-                double kd = 0.0;   // 微分增益
-                
-                double velocity = data_->qvel[dofadr];
-                double target_vel = target_velocities_[joint_id];
-                double force = kp * error + kd * (target_vel - velocity);
-                
-                // 应用力到执行器
-                data_->ctrl[joint_id] = force;
-            }
+            PID_control(0, 20, 0);
+            PID_control(1, 400, 0);
+            PID_control(2, 200, 0);
+            PID_control(3, 150, 0);
+            PID_control(4, 150, 0);
+            PID_control(5, 80, 0);
+            // RCLCPP_INFO(get_logger(), "force0 %f", data_->ctrl[joint_id_map[0]]);
+            // RCLCPP_INFO(get_logger(), "force1 %f", data_->ctrl[joint_id_map[1]]);
+        }
+
+        void PID_control(uint8_t id,uint8_t kp, uint8_t kd)
+        {
+            current_positions[id] = data_->qpos[qpos_adr_[id]];
+            double position_error = target_positions_[id] - current_positions[id];
+            current_velocities[id] = data_->qvel[qvel_adr_[id]];
+            double velocity_error = target_velocities_[id] - current_velocities[id];
+
+            double force = kp * position_error + kd * velocity_error;
+
+            // 应用力到执行器
+            data_->ctrl[joint_id_map[id]] = force;
+
         }
 
         void init_rendering(mjvScene* scn, mjrContext* con, mjvCamera* cam) 
@@ -155,6 +182,8 @@ class Ur5e_Node : public rclcpp::Node
             mjv_defaultOption(&vopt_);
             mjr_defaultContext(con);
 
+            // 打开扰动力的可视化
+            vopt_.flags[mjVIS_PERTFORCE] = 1;
             // 调整相机位置
             cam->distance = 3;
             cam->elevation = -40;
@@ -209,6 +238,63 @@ class Ur5e_Node : public rclcpp::Node
             glfwGetCursorPos(window, &lastx, &lasty);
         }
 
+        // mouse move callback
+        void mouse_move(GLFWwindow* window, double xpos, double ypos) 
+        {
+            // no buttons down: nothing to do
+            if (!button_left && !button_middle && !button_right) {
+                return;
+            }
+
+            // compute mouse displacement, save
+            double dx = xpos - lastx;
+            double dy = ypos - lasty;
+            lastx = xpos;
+            lasty = ypos;
+
+            // get current window size
+            int width, height;
+            glfwGetWindowSize(window, &width, &height);
+
+            // get shift key state
+            bool mod_shift = (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT)==GLFW_PRESS ||
+                                glfwGetKey(window, GLFW_KEY_RIGHT_SHIFT)==GLFW_PRESS);
+
+            // get ctrl key state
+            bool mod_ctrl = (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL)==GLFW_PRESS ||
+                                glfwGetKey(window, GLFW_KEY_RIGHT_CONTROL)==GLFW_PRESS);
+            
+            // determine action based on mouse button
+            mjtMouse action;
+            if (button_right) {
+                action = mod_shift ? mjMOUSE_MOVE_H : mjMOUSE_MOVE_V;
+            } else if (button_left) {
+                action = mod_shift ? mjMOUSE_ROTATE_H : mjMOUSE_ROTATE_V;
+            } else {
+                action = mjMOUSE_ZOOM;
+            }
+
+            int body_id = mj_name2id(model_, mjOBJ_BODY, "link6");
+            // 施加扰动力   
+            if(mod_ctrl && body_id != -1)
+            {
+                force_vector[0] = dx * force_scale;
+                force_vector[1] = dy * force_scale;
+                force_vector[2] = 0;
+                data_->xfrc_applied[6 * body_id + 0] = force_vector[0];  // Fx
+                data_->xfrc_applied[6 * body_id + 1] = force_vector[1];  // Fy
+                data_->xfrc_applied[6 * body_id + 2] = force_vector[2];  // Fz
+            }
+            else
+            {
+                // move camera
+                mjv_moveCamera(model_, action, dx/height, dy/height, &scn, &cam);
+            }
+            
+        }
+
+        std::array<double, 6> target_positions_;
+        std::array<double, 6> target_velocities_;
 
     private:
         mjModel* model_ = nullptr;
@@ -216,6 +302,9 @@ class Ur5e_Node : public rclcpp::Node
         GLFWwindow* window_ = nullptr;
 
         std::vector<std::string> joint_names;
+        uint8_t joint_nums = 6;
+        // 关节ID映射表
+        std::map<int, int> joint_id_map;
 
         // ROS 接口
         rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_pub_;
@@ -239,8 +328,18 @@ class Ur5e_Node : public rclcpp::Node
         double lasty = 0;
 
         // 控制变量
-        std::map<int, double> target_positions_;
-        std::map<int, double> target_velocities_;
+        uint8_t force_scale;  // 力缩放系数
+        double force_vector[3];  //扰动力
+
+        // 关节的位置和速度地址
+        std::array<int, 6> qpos_adr_;
+        std::array<int, 6> qvel_adr_;
+        std::array<double, 6> current_positions;
+        std::array<double, 6> current_velocities;
+
+        // PD控制器
+        double kp = 50.0;  // 比例增益
+        double kd = 0.0;   // 微分增益
 };
 
 
