@@ -73,6 +73,43 @@ class Ur5e_Node : public rclcpp::Node
 
         void run()
         {
+            std::thread render_thread(&Ur5e_Node::rendering_thread, this);
+            // 主仿真循环
+            double last_update = glfwGetTime();
+            while (render_active_)
+            {
+                // 计算时间步长
+                double now = glfwGetTime();
+                double dt = now - last_update;
+                last_update = now;
+                RCLCPP_INFO(get_logger(), "dt : %f", dt);
+                
+                {
+                    std::lock_guard<std::mutex> lock();
+                    // 物理仿真步进
+                    mj_step(model_, data_);
+                }
+
+                // 500Hz的控制频率
+                double elapse = glfwGetTime() - now;
+                if(elapse < 0.002)
+                {
+                    std::this_thread::sleep_for(std::chrono::duration<double>(0.002- elapse));
+                }
+                // RCLCPP_INFO(get_logger(), "施加扰动力");
+                // RCLCPP_INFO(get_logger(), "force_vector[0] %f", force_vector[0]);
+                // RCLCPP_INFO(get_logger(), "force_vector[1] %f", force_vector[1]);
+            }
+
+            // 关闭glfw
+            glfwTerminate();
+            // 清理渲染资源
+            mjr_freeContext(&con);
+            mjv_freeScene(&scn);
+        }
+
+        void rendering_thread()
+        {
             // 创建GLFW窗口
             if (!glfwInit()) 
             {
@@ -119,43 +156,25 @@ class Ur5e_Node : public rclcpp::Node
             glfwSetKeyCallback(window_, keyboard);
             glfwSetMouseButtonCallback(window_, mouse_button);
             glfwSetCursorPosCallback(window_, mouse_move);
-
-            // 主仿真循环
-            double last_update = glfwGetTime();
             while (!glfwWindowShouldClose(window_))
             {
-                // 计算时间步长
-                double now = glfwGetTime();
-                double dt = now - last_update;
-                last_update = now;
-                // RCLCPP_INFO(get_logger(), "dt : %f", dt);
-                
-                // 物理仿真步进
-                mj_step(model_, data_);
-
-                // RCLCPP_INFO(get_logger(), "施加扰动力");
-                // RCLCPP_INFO(get_logger(), "force_vector[0] %f", force_vector[0]);
-                // RCLCPP_INFO(get_logger(), "force_vector[1] %f", force_vector[1]);
-
-                // 渲染
-                render_frame(&scn, &con, &cam);
+                {
+                    std::lock_guard<std::mutex> lock();
+                    // 渲染
+                    render_frame(&scn, &con, &cam);
+                }
             }
-
-            // 关闭glfw
-            glfwTerminate();
-            // 清理渲染资源
-            mjr_freeContext(&con);
-            mjv_freeScene(&scn);
+            render_active_ = 0;
         }
 
         void apply_position_control() 
         {
             PID_control(0, 20, 0);
-            PID_control(1, 400, 0);
-            PID_control(2, 200, 0);
-            PID_control(3, 150, 0);
-            PID_control(4, 150, 0);
-            PID_control(5, 80, 0);
+            PID_control(1, 60, 10);
+            PID_control(2, 40, 0);
+            PID_control(3, 30, 0);
+            PID_control(4, 20, 0);
+            PID_control(5, 20, 0);
             // RCLCPP_INFO(get_logger(), "force0 %f", data_->ctrl[joint_id_map[0]]);
             // RCLCPP_INFO(get_logger(), "force1 %f", data_->ctrl[joint_id_map[1]]);
         }
@@ -223,6 +242,13 @@ class Ur5e_Node : public rclcpp::Node
             {
                 mj_resetData(model_, data_);
                 mj_forward(model_, data_);
+            }
+            else if(act==GLFW_PRESS && key==GLFW_KEY_ENTER)
+            {
+                int body_id = mj_name2id(model_, mjOBJ_BODY, "link6");
+                data_->xfrc_applied[6 * body_id + 0] = 0;
+                data_->xfrc_applied[6 * body_id + 1] = 0;
+                data_->xfrc_applied[6 * body_id + 2] = 0;
             }
         }
 
@@ -336,10 +362,10 @@ class Ur5e_Node : public rclcpp::Node
         std::array<int, 6> qvel_adr_;
         std::array<double, 6> current_positions;
         std::array<double, 6> current_velocities;
-
-        // PD控制器
-        double kp = 50.0;  // 比例增益
-        double kd = 0.0;   // 微分增益
+        
+        // 互斥锁保护共享数据访问
+        std::mutex data_mutex_;
+        uint8_t render_active_ = 1;
 };
 
 

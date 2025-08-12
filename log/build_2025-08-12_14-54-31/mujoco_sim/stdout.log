@@ -1,0 +1,21 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o[0m
+[100%] [32m[1mLinking CXX executable ur5e_control[0m
+[100%] Built target ur5e_control
+-- Install configuration: ""
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/ur5e_control
+-- Set non-toolchain portion of runtime path of "/home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/ur5e_control" to ""
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/package_run_dependencies/mujoco_sim
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/parent_prefix_path/mujoco_sim
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/ament_prefix_path.sh
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/ament_prefix_path.dsv
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/path.sh
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/path.dsv
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.bash
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.sh
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.zsh
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.dsv
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.dsv
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/packages/mujoco_sim
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/cmake/mujoco_simConfig.cmake
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/cmake/mujoco_simConfig-version.cmake
+-- Installing: /home/xiatenghui/workspace/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.xml
