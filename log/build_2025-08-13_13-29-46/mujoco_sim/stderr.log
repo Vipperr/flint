@@ -1,0 +1,44 @@
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:381:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::bottom[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+  381 |         mjrRect rect_ = {0[01;35m[K}[m[K;
+      |                           [01;35m[K^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:381:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:381:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In lambda function:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:66:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Km[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   66 |             mjcb_control = []([01;35m[Kconst mjModel* m[m[K, mjData* d) {
+      |                               [01;35m[K~~~~~~~~~~~~~~~^[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In constructor ‘[01m[KUr5e_Node::[01;32m[KUr5e_Node[m[K(std::string)[m[K’:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:71:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   71 |             for (int i = 0; [01;35m[Ki < joint_names.size()[m[K; i++)
+      |                             [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Krun[m[K()[m[K’:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:117:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+  117 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+      |                                                     [01;35m[K^~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:112:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  112 |                 double [01;35m[Kdt[m[K = now - last_update;
+      |                        [01;35m[K^~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Krendering_thread[m[K()[m[K’:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:191:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+  191 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+      |                                                     [01;35m[K^~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Kkeyboard[m[K(GLFWwindow*, int, int, int, int)[m[K’:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:273:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  273 |         void keyboard([01;35m[KGLFWwindow* window[m[K, int key, int scancode, int act, int mods)
+      |                       [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:273:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  273 |         void keyboard(GLFWwindow* window, int key, [01;35m[Kint scancode[m[K, int act, int mods)
+      |                                                    [01;35m[K~~~~^~~~~~~~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:273:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  273 |         void keyboard(GLFWwindow* window, int key, int scancode, int act, [01;35m[Kint mods[m[K)
+      |                                                                           [01;35m[K~~~~^~~~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Kmouse_button[m[K(GLFWwindow*, int, int, int)[m[K’:
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:290:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbutton[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  290 |         void mouse_button(GLFWwindow* window, [01;35m[Kint button[m[K, int act, int mods)
+      |                                               [01;35m[K~~~~^~~~~~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:290:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kact[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  290 |         void mouse_button(GLFWwindow* window, int button, [01;35m[Kint act[m[K, int mods)
+      |                                                           [01;35m[K~~~~^~~[m[K
+[01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:290:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  290 |         void mouse_button(GLFWwindow* window, int button, int act, [01;35m[Kint mods[m[K)
+      |                                                                    [01;35m[K~~~~^~~~[m[K

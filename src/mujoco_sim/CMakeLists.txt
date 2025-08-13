@@ -5,23 +5,29 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+# find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(Eigen3 REQUIRED)
+
 ## mujoco相关配置
 set(MUJOCO_PATH "/home/xiatenghui/mujoco") 
 
 # 手动包含头文件目录
 include_directories(${MUJOCO_PATH}/include
   include
-  /usr/local/include/OpenXLSX)
+  /usr/local/include/OpenXLSX
+  ${EIGEN3_INCLUDE_DIR})
+
+
 # 手动链接库目录
 link_directories(${MUJOCO_PATH}/lib
 )
 
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(sensor_msgs REQUIRED)
-
-add_executable(ur5e_control src/ur5e_control.cpp)
+add_executable(ur5e_control 
+src/ur5e_control.cpp
+src/get_Regression.cpp)
 
 # 处理非ROS包依赖
 target_link_libraries(ur5e_control
@@ -31,6 +37,7 @@ target_link_libraries(ur5e_control
   pugixml
   libzzip.so
   miniz
+  Eigen3::Eigen
   )
 
 # 处理ROS包依赖

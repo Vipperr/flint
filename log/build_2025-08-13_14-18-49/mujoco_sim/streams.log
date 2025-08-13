@@ -1,0 +1,60 @@
+[0.011s] Invoking command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[0.068s] [ 33%] [32mBuilding CXX object CMakeFiles/ur5e_control.dir/src/get_Regression.cpp.o[0m
+[0.069s] [ 66%] [32mBuilding CXX object CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o[0m
+[1.925s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:396:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::bottom[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[1.925s]   396 |         mjrRect rect_ = {0[01;35m[K}[m[K;
+[1.925s]       |                           [01;35m[K^[m[K
+[1.925s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:396:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[1.925s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:396:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[1.932s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In lambda function:
+[1.932s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:66:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Km[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.932s]    66 |             mjcb_control = []([01;35m[Kconst mjModel* m[m[K, mjData* d) {
+[1.933s]       |                               [01;35m[K~~~~~~~~~~~~~~~^[m[K
+[1.933s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In constructor ‘[01m[KUr5e_Node::[01;32m[KUr5e_Node[m[K(std::string)[m[K’:
+[1.933s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:71:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[1.933s]    71 |             for (int i = 0; [01;35m[Ki < joint_names.size()[m[K; i++)
+[1.933s]       |                             [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.935s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Krun[m[K()[m[K’:
+[1.935s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:117:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+[1.935s]   117 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+[1.935s]       |                                                     [01;35m[K^~[m[K
+[1.935s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:112:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.935s]   112 |                 double [01;35m[Kdt[m[K = now - last_update;
+[1.935s]       |                        [01;35m[K^~[m[K
+[1.936s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Krendering_thread[m[K()[m[K’:
+[1.936s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:191:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+[1.936s]   191 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+[1.936s]       |                                                     [01;35m[K^~[m[K
+[1.954s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Kkeyboard[m[K(GLFWwindow*, int, int, int, int)[m[K’:
+[1.954s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:288:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.954s]   288 |         void keyboard([01;35m[KGLFWwindow* window[m[K, int key, int scancode, int act, int mods)
+[1.954s]       |                       [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[1.954s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:288:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.954s]   288 |         void keyboard(GLFWwindow* window, int key, [01;35m[Kint scancode[m[K, int act, int mods)
+[1.954s]       |                                                    [01;35m[K~~~~^~~~~~~~[m[K
+[1.954s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:288:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.954s]   288 |         void keyboard(GLFWwindow* window, int key, int scancode, int act, [01;35m[Kint mods[m[K)
+[1.954s]       |                                                                           [01;35m[K~~~~^~~~[m[K
+[1.954s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Kmouse_button[m[K(GLFWwindow*, int, int, int)[m[K’:
+[1.954s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:305:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbutton[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.954s]   305 |         void mouse_button(GLFWwindow* window, [01;35m[Kint button[m[K, int act, int mods)
+[1.954s]       |                                               [01;35m[K~~~~^~~~~~[m[K
+[1.954s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:305:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kact[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.954s]   305 |         void mouse_button(GLFWwindow* window, int button, [01;35m[Kint act[m[K, int mods)
+[1.954s]       |                                                           [01;35m[K~~~~^~~[m[K
+[1.955s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:305:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.955s]   305 |         void mouse_button(GLFWwindow* window, int button, int act, [01;35m[Kint mods[m[K)
+[1.955s]       |                                                                    [01;35m[K~~~~^~~~[m[K
+[2.053s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:164[m[K,
+[2.053s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[2.053s]                  from [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:8[m[K:
+[2.053s] /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of ‘[01m[KEigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::[01;32m[Koperator[][m[K(Eigen::Index) [35m[K[with Derived = Eigen::Matrix<double, -1, -1>; Scalar = double; Eigen::Index = long int][m[K[m[K’:
+[2.053s] [01m[K/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:215:17:[m[K   required from here
+[2.053s] [01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:408:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: THE_BRACKET_OPERATOR_IS_ONLY_FOR_VECTORS__USE_THE_PARENTHESIS_OPERATOR_INSTEAD
+[2.053s]   408 |       [01;31m[KEIGEN_STATIC_ASSERT[m[K(Derived::IsVectorAtCompileTime,
+[2.053s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.053s] [01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:408:7:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::Matrix<double, -1, -1>::IsVectorAtCompileTime[m[K’ evaluates to false
+[2.912s] gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:76：CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o] 错误 1
+[2.912s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
+[2.912s] gmake: *** [Makefile:146：all] 错误 2
+[2.914s] Invoked command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24

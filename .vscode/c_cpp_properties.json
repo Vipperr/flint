@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "/opt/ros/jazzy/include/**",
                 "/home/xiatenghui/mujoco/include",
-                "/usr/local/include"
+                "/usr/local/include",
+                "/usr/include/eigen3"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

@@ -5,6 +5,7 @@
 #include <thread>
 #include "get_Regression.hpp"
 #include "OpenXLSX/OpenXLSX.hpp"
+#include <Eigen/Dense>
 
 using namespace OpenXLSX;
 
@@ -43,10 +44,10 @@ class Ur5e_Node : public rclcpp::Node
                 if (value.type() == OpenXLSX::XLValueType::Float || 
                     value.type() == OpenXLSX::XLValueType::Integer) {
                     double num = value.get<double>();
-                    PA_.push_back(num);
+                    PA_[row-1] = num;
                 }                 
             }
-            
+
             // 创建仿真数据结构
             data_ = mj_makeData(model_);
             RCLCPP_INFO(this->get_logger(), "模型加载成功");
@@ -197,23 +198,54 @@ class Ur5e_Node : public rclcpp::Node
 
         void apply_position_control() 
         {
-            PID_control(0, 20, 0);
-            PID_control(1, 80, 10);
-            PID_control(2, 60, 5);
-            PID_control(3, 30, 0);
-            PID_control(4, 20, 0);
-            PID_control(5, 20, 0);
+            // 读取当前角度和速度
+            for(uint8_t i = 0;i < joint_nums;i++)
+            {
+                current_positions[i] = data_->qpos[qpos_adr_[i]];
+                current_velocities[i] = data_->qvel[qvel_adr_[i]];
+                current_accelerations[i] = 0;
+            }
+            current_positions[1] = current_positions[1] + M_PI/2.0;
+            current_positions[3] = current_positions[3] - M_PI/2.0;
+            // for(uint8_t i = 0;i < joint_nums;i++)
+            // {
+            //     RCLCPP_INFO(get_logger(), "current_positions[%d] : %f", i, current_positions[i]);
+            // }
+            double calculate_result[288];
+            get_Regression(calculate_result, current_positions, {0,0,0,0,0,0}, {0,0,0,0,0,0});
+            // double force[6];
+            // for(uint8_t i = 0;i < joint_nums;i++)
+            // {
+            //     double sum = 0;
+            //     for(uint8_t j = 0;j < 48;j++)
+            //     {
+            //         sum += calculate_result[48*i + j] * PA_[j];
+            //     }
+            //     force[i] = sum;
+            // }
+            Eigen::Map<Eigen::Matrix<double, 6, 48, Eigen::RowMajor>> Regression_Matrix(calculate_result);
+            Eigen::VectorXd force = Regression_Matrix * PA_;
+            RCLCPP_INFO(get_logger(), "calculate force result");
+            for(uint8_t i = 0;i < joint_nums;i++)
+            {
+                RCLCPP_INFO(get_logger(), "force %d : %f", i, force[i]);
+                data_->ctrl[joint_id_map[i]] = force[i];
+            }
+            // PID_control(0, 20, 0);
+            // PID_control(1, 80, 10);
+            // PID_control(2, 60, 5);
+            // PID_control(3, 30, 0);
+            // PID_control(4, 20, 0);
+            // PID_control(5, 20, 0);
+
             // RCLCPP_INFO(get_logger(), "force0 %f", data_->ctrl[joint_id_map[0]]);
             // RCLCPP_INFO(get_logger(), "force1 %f", data_->ctrl[joint_id_map[1]]);
         }
 
         void PID_control(uint8_t id,uint8_t kp, uint8_t kd)
         {
-            current_positions[id] = data_->qpos[qpos_adr_[id]];
             double position_error = target_positions_[id] - current_positions[id];
-            current_velocities[id] = data_->qvel[qvel_adr_[id]];
             double velocity_error = target_velocities_[id] - current_velocities[id];
-
             double force = kp * position_error + kd * velocity_error;
 
             // 应用力到执行器
@@ -333,8 +365,8 @@ class Ur5e_Node : public rclcpp::Node
             if(mod_ctrl && body_id != -1)
             {
                 force_vector[0] = dx * force_scale;
-                force_vector[1] = dy * force_scale;
-                force_vector[2] = 0;
+                force_vector[1] = 0;
+                force_vector[2] = dy * force_scale;
                 data_->xfrc_applied[6 * body_id + 0] = force_vector[0];  // Fx
                 data_->xfrc_applied[6 * body_id + 1] = force_vector[1];  // Fy
                 data_->xfrc_applied[6 * body_id + 2] = force_vector[2];  // Fz
@@ -390,13 +422,14 @@ class Ur5e_Node : public rclcpp::Node
         std::array<int, 6> qvel_adr_;
         std::array<double, 6> current_positions;
         std::array<double, 6> current_velocities;
+        std::array<double, 6> current_accelerations;
         
         // 互斥锁保护共享数据访问
         std::mutex data_mutex_;
         uint8_t render_active_ = 1;
 
         // 最小惯性参数集和傅里叶级数系数
-        std::vector<double> PA_;
+        Eigen::VectorXd PA_ = Eigen::VectorXd::Zero(48);
         std::vector<double> fourier_series_;
 
 };

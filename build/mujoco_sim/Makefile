@@ -210,6 +210,30 @@ ur5e_control/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_control.dir/build.make CMakeFiles/ur5e_control.dir/build
 .PHONY : ur5e_control/fast
 
+src/get_Regression.o: src/get_Regression.cpp.o
+.PHONY : src/get_Regression.o
+
+# target to build an object file
+src/get_Regression.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_control.dir/build.make CMakeFiles/ur5e_control.dir/src/get_Regression.cpp.o
+.PHONY : src/get_Regression.cpp.o
+
+src/get_Regression.i: src/get_Regression.cpp.i
+.PHONY : src/get_Regression.i
+
+# target to preprocess a source file
+src/get_Regression.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_control.dir/build.make CMakeFiles/ur5e_control.dir/src/get_Regression.cpp.i
+.PHONY : src/get_Regression.cpp.i
+
+src/get_Regression.s: src/get_Regression.cpp.s
+.PHONY : src/get_Regression.s
+
+# target to generate assembly for a file
+src/get_Regression.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_control.dir/build.make CMakeFiles/ur5e_control.dir/src/get_Regression.cpp.s
+.PHONY : src/get_Regression.cpp.s
+
 src/ur5e_control.o: src/ur5e_control.cpp.o
 .PHONY : src/ur5e_control.o
 
@@ -250,6 +274,9 @@ help:
 	@echo "... mujoco_sim_uninstall"
 	@echo "... uninstall"
 	@echo "... ur5e_control"
+	@echo "... src/get_Regression.o"
+	@echo "... src/get_Regression.i"
+	@echo "... src/get_Regression.s"
 	@echo "... src/ur5e_control.o"
 	@echo "... src/ur5e_control.i"
 	@echo "... src/ur5e_control.s"

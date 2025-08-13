@@ -1,7 +1,6 @@
-#include <math.h>
 #include "get_Regression.hpp"
 
-void get_Regression( double* H, const double* q, const double* dq, const double* ddq)
+void get_Regression( double* H, const std::array<double, 6>& q, const std::array<double, 6>& dq, const std::array<double, 6>& ddq)
 {
   double x0 = sin(q[1]);
   double x1 = 1.0*dq[0];
