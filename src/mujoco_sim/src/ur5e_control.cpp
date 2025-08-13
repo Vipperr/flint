@@ -3,6 +3,10 @@
 #include <GLFW/glfw3.h>
 #include <sensor_msgs/msg/joint_state.hpp>
 #include <thread>
+#include "get_Regression.hpp"
+#include "OpenXLSX/OpenXLSX.hpp"
+
+using namespace OpenXLSX;
 
 class Ur5e_Node : public rclcpp::Node
 {
@@ -19,6 +23,30 @@ class Ur5e_Node : public rclcpp::Node
                 throw std::runtime_error("模型加载失败");
             }
 
+            // 读取xlsx文件
+            XLDocument PA;
+            XLDocument fourier_series;
+            PA.open("/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/PA.xlsx");
+            fourier_series.open("/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/fourier_series.xlsx");
+
+            XLWorksheet PA_sheet = PA.workbook().worksheet("Sheet1");
+            XLWorksheet fourier_series_sheet = fourier_series.workbook().worksheet("Sheet1");
+
+            int maxRow = PA_sheet.rowCount();
+            for(int row = 1;row <= maxRow;row++)
+            {
+                auto cell = PA_sheet.cell(row, 1);
+                auto& value = cell.value();
+                if (value.type() == OpenXLSX::XLValueType::Empty) continue;
+
+                // 处理数值
+                if (value.type() == OpenXLSX::XLValueType::Float || 
+                    value.type() == OpenXLSX::XLValueType::Integer) {
+                    double num = value.get<double>();
+                    PA_.push_back(num);
+                }                 
+            }
+            
             // 创建仿真数据结构
             data_ = mj_makeData(model_);
             RCLCPP_INFO(this->get_logger(), "模型加载成功");
@@ -82,7 +110,7 @@ class Ur5e_Node : public rclcpp::Node
                 double now = glfwGetTime();
                 double dt = now - last_update;
                 last_update = now;
-                RCLCPP_INFO(get_logger(), "dt : %f", dt);
+                // RCLCPP_INFO(get_logger(), "dt : %f", dt);
                 
                 {
                     std::lock_guard<std::mutex> lock();
@@ -170,8 +198,8 @@ class Ur5e_Node : public rclcpp::Node
         void apply_position_control() 
         {
             PID_control(0, 20, 0);
-            PID_control(1, 60, 10);
-            PID_control(2, 40, 0);
+            PID_control(1, 80, 10);
+            PID_control(2, 60, 5);
             PID_control(3, 30, 0);
             PID_control(4, 20, 0);
             PID_control(5, 20, 0);
@@ -366,6 +394,11 @@ class Ur5e_Node : public rclcpp::Node
         // 互斥锁保护共享数据访问
         std::mutex data_mutex_;
         uint8_t render_active_ = 1;
+
+        // 最小惯性参数集和傅里叶级数系数
+        std::vector<double> PA_;
+        std::vector<double> fourier_series_;
+
 };
 
 

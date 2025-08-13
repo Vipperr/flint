@@ -1,0 +1,6 @@
+[31mCMake Error at CMakeLists.txt:18 (add_subdirectory):
+  add_subdirectory given source "libs/Zippy" which is not an existing
+  directory.
+
+[0m
+gmake: *** [Makefile:267：cmake_check_build_system] 错误 1

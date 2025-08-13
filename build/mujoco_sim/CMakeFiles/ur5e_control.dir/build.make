@@ -92,7 +92,6 @@ ur5e_control_EXTERNAL_OBJECTS =
 
 ur5e_control: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o
 ur5e_control: CMakeFiles/ur5e_control.dir/build.make
-ur5e_control: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 ur5e_control: /opt/ros/jazzy/lib/librclcpp.so
 ur5e_control: /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
 ur5e_control: /opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so

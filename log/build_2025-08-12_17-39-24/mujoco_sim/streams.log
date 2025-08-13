@@ -1,0 +1,86 @@
+[0.010s] Invoking command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[0.034s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.206s] -- Found rclcpp: 28.1.10 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.227s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.233s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.242s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.253s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.298s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.300s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.358s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.408s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.456s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.523s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.523s] -- Configured cppcheck include dirs: /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/include
+[0.523s] -- Configured cppcheck exclude dirs and/or files: 
+[0.523s] -- Added test 'lint_cmake' to check CMake code style
+[0.524s] -- Added test 'uncrustify' to check C / C++ code style
+[0.524s] -- Configured uncrustify additional arguments: 
+[0.524s] -- Added test 'xmllint' to check XML markup files
+[0.525s] -- Configuring done (0.5s)
+[0.532s] -- Generating done (0.0s)
+[0.534s] -- Build files have been written to: /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim
+[0.573s] [ 50%] [32m[1mLinking CXX executable ur5e_control[0m
+[0.677s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::XLSheetBase<OpenXLSX::XLWorksheet, void>::~XLSheetBase()':
+[0.677s] ur5e_control.cpp:(.text._ZN8OpenXLSX11XLSheetBaseINS_11XLWorksheetEvED2Ev[_ZN8OpenXLSX11XLSheetBaseINS_11XLWorksheetEvED5Ev]+0x18): undefined reference to `OpenXLSX::XLXmlFile::~XLXmlFile()'
+[0.678s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::XLVmlDrawing::~XLVmlDrawing()':
+[0.678s] ur5e_control.cpp:(.text._ZN8OpenXLSX12XLVmlDrawingD2Ev[_ZN8OpenXLSX12XLVmlDrawingD5Ev]+0x28): undefined reference to `OpenXLSX::XLXmlFile::~XLXmlFile()'
+[0.678s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::XLComments::~XLComments()':
+[0.678s] ur5e_control.cpp:(.text._ZN8OpenXLSX10XLCommentsD2Ev[_ZN8OpenXLSX10XLCommentsD5Ev]+0x28): undefined reference to `OpenXLSX::XLXmlFile::~XLXmlFile()'
+[0.678s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::XLTables::~XLTables()':
+[0.678s] ur5e_control.cpp:(.text._ZN8OpenXLSX8XLTablesD2Ev[_ZN8OpenXLSX8XLTablesD5Ev]+0x18): undefined reference to `OpenXLSX::XLXmlFile::~XLXmlFile()'
+[0.678s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::XLWorksheet::~XLWorksheet()':
+[0.678s] ur5e_control.cpp:(.text._ZN8OpenXLSX11XLWorksheetD2Ev[_ZN8OpenXLSX11XLWorksheetD5Ev]+0x52): undefined reference to `OpenXLSX::XLMergeCells::~XLMergeCells()'
+[0.678s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN8OpenXLSX11XLWorksheetD2Ev[_ZN8OpenXLSX11XLWorksheetD5Ev]+0x62): undefined reference to `OpenXLSX::XLRelationships::~XLRelationships()'
+[0.679s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `Ur5e_Node::Ur5e_Node(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+[0.679s] ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x4b8): undefined reference to `OpenXLSX::XLZipArchive::XLZipArchive()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x4ea): undefined reference to `OpenXLSX::XLDocument::XLDocument(OpenXLSX::IZipArchive const&)'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x508): undefined reference to `OpenXLSX::XLZipArchive::~XLZipArchive()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x517): undefined reference to `OpenXLSX::XLZipArchive::XLZipArchive()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x549): undefined reference to `OpenXLSX::XLDocument::XLDocument(OpenXLSX::IZipArchive const&)'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x567): undefined reference to `OpenXLSX::XLZipArchive::~XLZipArchive()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x5b0): undefined reference to `OpenXLSX::XLDocument::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x618): undefined reference to `OpenXLSX::XLDocument::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x650): undefined reference to `OpenXLSX::XLDocument::workbook() const'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x66e): undefined reference to `OpenXLSX::XLWorkbook::worksheet(unsigned short)'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x67d): undefined reference to `OpenXLSX::XLWorkbook::~XLWorkbook()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x696): undefined reference to `OpenXLSX::XLDocument::workbook() const'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x6b4): undefined reference to `OpenXLSX::XLWorkbook::worksheet(unsigned short)'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x6c3): undefined reference to `OpenXLSX::XLWorkbook::~XLWorkbook()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x6e1): undefined reference to `OpenXLSX::XLWorksheet::column(unsigned short) const'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x852): undefined reference to `OpenXLSX::XLColumn::width() const'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0xf58): undefined reference to `OpenXLSX::XLColumn::~XLColumn()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0xf85): undefined reference to `OpenXLSX::XLDocument::~XLDocument()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0xf94): undefined reference to `OpenXLSX::XLDocument::~XLDocument()'
+[0.679s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x105d): undefined reference to `OpenXLSX::XLZipArchive::~XLZipArchive()'
+[0.680s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x1090): undefined reference to `OpenXLSX::XLZipArchive::~XLZipArchive()'
+[0.680s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x1113): undefined reference to `OpenXLSX::XLWorkbook::~XLWorkbook()'
+[0.680s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x112e): undefined reference to `OpenXLSX::XLWorkbook::~XLWorkbook()'
+[0.680s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x1277): undefined reference to `OpenXLSX::XLColumn::~XLColumn()'
+[0.680s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x12bf): undefined reference to `OpenXLSX::XLDocument::~XLDocument()'
+[0.680s] /usr/bin/ld: ur5e_control.cpp:(.text._ZN9Ur5e_NodeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN9Ur5e_NodeC5ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x12d7): undefined reference to `OpenXLSX::XLDocument::~XLDocument()'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::~Model()':
+[0.680s] ur5e_control.cpp:(.text._ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEED2Ev[_ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEED5Ev]+0x2a): undefined reference to `OpenXLSX::XLZipArchive::~XLZipArchive()'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::isValid() const':
+[0.680s] ur5e_control.cpp:(.text._ZNK8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE7isValidEv[_ZNK8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE7isValidEv]+0x1c): undefined reference to `OpenXLSX::XLZipArchive::isValid() const'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::isOpen() const':
+[0.680s] ur5e_control.cpp:(.text._ZNK8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE6isOpenEv[_ZNK8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE6isOpenEv]+0x1c): undefined reference to `OpenXLSX::XLZipArchive::isOpen() const'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[0.680s] ur5e_control.cpp:(.text._ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE4openERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE4openERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x27): undefined reference to `OpenXLSX::XLZipArchive::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::close()':
+[0.680s] ur5e_control.cpp:(.text._ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE5closeEv[_ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE5closeEv]+0x1c): undefined reference to `OpenXLSX::XLZipArchive::close()'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::save(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[0.680s] ur5e_control.cpp:(.text._ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE4saveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE4saveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x27): undefined reference to `OpenXLSX::XLZipArchive::save(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::addEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[0.680s] ur5e_control.cpp:(.text._ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE8addEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_[_ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE8addEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_]+0x2f): undefined reference to `OpenXLSX::XLZipArchive::addEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::deleteEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[0.680s] ur5e_control.cpp:(.text._ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE11deleteEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE11deleteEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x27): undefined reference to `OpenXLSX::XLZipArchive::deleteEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[0.680s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::getEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[0.681s] ur5e_control.cpp:(.text._ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE8getEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE8getEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x3e): undefined reference to `OpenXLSX::XLZipArchive::getEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const'
+[0.681s] /usr/bin/ld: CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o: in function `OpenXLSX::IZipArchive::Model<OpenXLSX::XLZipArchive>::hasEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const':
+[0.681s] ur5e_control.cpp:(.text._ZNK8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE8hasEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZNK8OpenXLSX11IZipArchive5ModelINS_12XLZipArchiveEE8hasEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x27): undefined reference to `OpenXLSX::XLZipArchive::hasEntry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const'
+[0.688s] collect2: error: ld returned 1 exit status
+[0.689s] gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:186：ur5e_control] 错误 1
+[0.689s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
+[0.689s] gmake: *** [Makefile:146：all] 错误 2
+[0.691s] Invoked command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24

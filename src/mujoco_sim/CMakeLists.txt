@@ -7,16 +7,19 @@ endif()
 
 ## mujoco相关配置
 set(MUJOCO_PATH "/home/xiatenghui/mujoco") 
+
 # 手动包含头文件目录
-include_directories(${MUJOCO_PATH}/include)
+include_directories(${MUJOCO_PATH}/include
+  include
+  /usr/local/include/OpenXLSX)
 # 手动链接库目录
-link_directories(${MUJOCO_PATH}/lib)
+link_directories(${MUJOCO_PATH}/lib
+)
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(glfw3 REQUIRED)
 
 add_executable(ur5e_control src/ur5e_control.cpp)
 
@@ -24,6 +27,10 @@ add_executable(ur5e_control src/ur5e_control.cpp)
 target_link_libraries(ur5e_control
   libmujoco.so
   glfw
+  OpenXLSX
+  pugixml
+  libzzip.so
+  miniz
   )
 
 # 处理ROS包依赖
