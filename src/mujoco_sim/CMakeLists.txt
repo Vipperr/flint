@@ -35,8 +35,6 @@ target_link_libraries(ur5e_control
   glfw
   OpenXLSX
   pugixml
-  libzzip.so
-  miniz
   Eigen3::Eigen
   )
 

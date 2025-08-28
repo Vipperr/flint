@@ -7,6 +7,7 @@
 #include "OpenXLSX/OpenXLSX.hpp"
 #include <Eigen/Dense>
 
+using namespace std::chrono_literals;
 using namespace OpenXLSX;
 
 class Ur5e_Node : public rclcpp::Node
@@ -16,7 +17,7 @@ class Ur5e_Node : public rclcpp::Node
         {
             char error[1024] = {0};
             // load ur5e model
-            model_ = mj_loadXML("/home/xiatenghui/mujoco/ur5e_description/urdf/ur5e_description.xml", nullptr, error, sizeof(error));
+            model_ = mj_loadXML("//home/xiatenghui/work_space/ur5e_description/urdf/ur5e_description.xml", nullptr, error, sizeof(error));
             if(!model_)
             {
                 // 模型加载失败处理
@@ -32,6 +33,8 @@ class Ur5e_Node : public rclcpp::Node
 
             XLWorksheet PA_sheet = PA.workbook().worksheet("Sheet1");
             XLWorksheet fourier_series_sheet = fourier_series.workbook().worksheet("Sheet1");
+
+            timer_ = this->create_wall_timer(10ms,std::bind(&Ur5e_Node::timer_callback, this));
 
             int maxRow = PA_sheet.rowCount();
             for(int row = 1;row <= maxRow;row++)
@@ -379,6 +382,28 @@ class Ur5e_Node : public rclcpp::Node
             
         }
 
+        void timer_callback() 
+        {
+            auto message = sensor_msgs::msg::JointState();
+            message.header.stamp = this->now();
+            message.name = joint_names;
+            message.position.resize(6);
+            message.velocity.resize(6);
+            message.effort.resize(6);
+
+            for(int i = 0;i < joint_nums;i++)
+            {
+                message.position[i] = current_positions[i];
+                message.velocity[i] = current_velocities[i];
+            }
+            
+            
+
+            
+            joint_state_pub_->publish(message);
+
+        }
+
         std::array<double, 6> target_positions_;
         std::array<double, 6> target_velocities_;
 
@@ -431,6 +456,8 @@ class Ur5e_Node : public rclcpp::Node
         // 最小惯性参数集和傅里叶级数系数
         Eigen::VectorXd PA_ = Eigen::VectorXd::Zero(48);
         std::vector<double> fourier_series_;
+
+        rclcpp::TimerBase::SharedPtr timer_;
 
 };
 
