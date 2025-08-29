@@ -1,7 +1,7 @@
 CMakeFiles/ur5e_control.dir/src/get_Regression.cpp.o: \
- /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/get_Regression.cpp \
+ /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/get_Regression.cpp \
  /usr/include/stdc-predef.h \
- /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/include/get_Regression.hpp \
+ /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/include/get_Regression.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/13/csignal \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim
+CMAKE_SOURCE_DIR = /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim
+CMAKE_BINARY_DIR = /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim
 
 # Utility rule file for mujoco_sim_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/mujoco_sim_uninstall.dir/compiler_depend.make
 include CMakeFiles/mujoco_sim_uninstall.dir/progress.make
 
 CMakeFiles/mujoco_sim_uninstall:
-	/usr/bin/cmake -P /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 mujoco_sim_uninstall: CMakeFiles/mujoco_sim_uninstall
 mujoco_sim_uninstall: CMakeFiles/mujoco_sim_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/mujoco_sim_uninstall.dir/clean:
 .PHONY : CMakeFiles/mujoco_sim_uninstall.dir/clean
 
 CMakeFiles/mujoco_sim_uninstall.dir/depend:
-	cd /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim/CMakeFiles/mujoco_sim_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/mujoco_sim_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/mujoco_sim_uninstall.dir/depend
 

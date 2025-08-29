@@ -1,0 +1,19 @@
+[0.667s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log --single-version-externally-managed install_data
+[0.841s] running egg_info
+[0.852s] writing ../../build/ur5e_description/ur5e_description.egg-info/PKG-INFO
+[0.852s] writing dependency_links to ../../build/ur5e_description/ur5e_description.egg-info/dependency_links.txt
+[0.852s] writing requirements to ../../build/ur5e_description/ur5e_description.egg-info/requires.txt
+[0.852s] writing top-level names to ../../build/ur5e_description/ur5e_description.egg-info/top_level.txt
+[0.874s] reading manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+[0.875s] writing manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+[0.875s] running build
+[0.875s] running build_py
+[0.875s] running install
+[0.879s] running install_lib
+[0.891s] running install_data
+[0.891s] running install_egg_info
+[0.903s] removing '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description-0.0.0-py3.12.egg-info' (and everything under it)
+[0.903s] Copying ../../build/ur5e_description/ur5e_description.egg-info to /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description-0.0.0-py3.12.egg-info
+[0.904s] running install_scripts
+[0.983s] writing list of installed files to '/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log'
+[1.001s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log --single-version-externally-managed install_data

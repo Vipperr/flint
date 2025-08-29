@@ -17,7 +17,7 @@ class Ur5e_Node : public rclcpp::Node
         {
             char error[1024] = {0};
             // load ur5e model
-            model_ = mj_loadXML("//home/xiatenghui/work_space/ur5e_description/urdf/ur5e_description.xml", nullptr, error, sizeof(error));
+            model_ = mj_loadXML("/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description/urdf/ur5e_description.xml", nullptr, error, sizeof(error));
             if(!model_)
             {
                 // 模型加载失败处理
@@ -28,16 +28,16 @@ class Ur5e_Node : public rclcpp::Node
             // 读取xlsx文件
             XLDocument PA;
             XLDocument fourier_series;
-            PA.open("/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/PA.xlsx");
-            fourier_series.open("/home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim/src/fourier_series.xlsx");
+            PA.open("/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/PA.xlsx");
+            fourier_series.open("/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/fourier_series.xlsx");
 
             XLWorksheet PA_sheet = PA.workbook().worksheet("Sheet1");
             XLWorksheet fourier_series_sheet = fourier_series.workbook().worksheet("Sheet1");
 
             timer_ = this->create_wall_timer(10ms,std::bind(&Ur5e_Node::timer_callback, this));
 
-            int maxRow = PA_sheet.rowCount();
-            for(int row = 1;row <= maxRow;row++)
+            int PA_Row = PA_sheet.rowCount();
+            for(int row = 1;row <= PA_Row;row++)
             {
                 auto cell = PA_sheet.cell(row, 1);
                 auto& value = cell.value();
@@ -49,6 +49,36 @@ class Ur5e_Node : public rclcpp::Node
                     double num = value.get<double>();
                     PA_[row-1] = num;
                 }                 
+            }
+
+            int fourier_series_Row = fourier_series_sheet.rowCount();
+            for(int row = 1;row <= fourier_series_Row;row++)
+            {
+                auto cell = fourier_series_sheet.cell(row, 1);
+                auto& value = cell.value();
+                if (value.type() == OpenXLSX::XLValueType::Empty) continue;
+
+                // 处理数值
+                if (value.type() == OpenXLSX::XLValueType::Float || 
+                    value.type() == OpenXLSX::XLValueType::Integer) {
+                    double num = value.get<double>();
+                    fourier_series_.push_back(num);
+                }
+            }
+
+            Eigen::Map<Eigen::Matrix<double, 11, 6, Eigen::ColMajor>> fourier_series_data(fourier_series_.data());
+            for(int i = 0;i < joint_nums;i++)
+            {
+                std::array<double, 5> A;
+                std::array<double, 5> B;
+                for(int j = 0;j < 5;j++)
+                {
+                    A[j] = fourier_series_data(j, i);
+                    B[j] = fourier_series_data(j+5, i);
+                }
+                A_.push_back(A);
+                B_.push_back(B);
+                C_[i] = fourier_series_data(10, i);
             }
 
             // 创建仿真数据结构
@@ -64,6 +94,11 @@ class Ur5e_Node : public rclcpp::Node
                 "joint1", "joint2", "joint3", "joint4", "joint5", "joint6"
             };
 
+            sensor_names = {
+                "sensor_joint1_torque", "sensor_joint2_torque", "sensor_joint3_torque",
+                "sensor_joint4_torque", "sensor_joint5_torque", "sensor_joint6_torque"
+            };
+
             // 控制器回调函数注册
             data_->userdata = (mjtNum*)this;
             mjcb_control = [](const mjModel* m, mjData* d) {
@@ -74,6 +109,7 @@ class Ur5e_Node : public rclcpp::Node
             for (int i = 0; i < joint_names.size(); i++)
             {
                 int joint_id = mj_name2id(model_, mjOBJ_JOINT, joint_names[i].c_str());
+                int sensor_id = mj_name2id(model_, mjOBJ_SENSOR, sensor_names[i].c_str());
                 if (joint_id != -1) 
                 {
                     // 设置初始位置为0
@@ -85,14 +121,18 @@ class Ur5e_Node : public rclcpp::Node
 
                     // 关节ID映射
                     joint_id_map[i] = joint_id;
+                    sensor_id_map[i] = sensor_id;
 
                     qpos_adr_[i] = model_->jnt_qposadr[joint_id];
                     qvel_adr_[i] = model_->jnt_dofadr[joint_id];
                 }
             }
+            target_positions_[1] = M_PI/2.0;
+            target_positions_[3] = -M_PI/2.0;
 
             // 创建状态发布器
             joint_state_pub_ = create_publisher<sensor_msgs::msg::JointState>("joint_states", 10);
+            target_state_pub_ = create_publisher<sensor_msgs::msg::JointState>("target_states", 10);
         }
 
         ~Ur5e_Node() 
@@ -108,6 +148,8 @@ class Ur5e_Node : public rclcpp::Node
             std::thread render_thread(&Ur5e_Node::rendering_thread, this);
             // 主仿真循环
             double last_update = glfwGetTime();
+            rclcpp::Time current_time = this->now();
+            start_time = current_time.seconds();
             while (render_active_)
             {
                 // 计算时间步长
@@ -206,40 +248,41 @@ class Ur5e_Node : public rclcpp::Node
             {
                 current_positions[i] = data_->qpos[qpos_adr_[i]];
                 current_velocities[i] = data_->qvel[qvel_adr_[i]];
-                current_accelerations[i] = 0;
+                effort[i] = data_->sensordata[sensor_id_map[i]];
             }
             current_positions[1] = current_positions[1] + M_PI/2.0;
             current_positions[3] = current_positions[3] - M_PI/2.0;
+            rclcpp::Time control_time = this->now();
+            double current_time = control_time.seconds();
+            double time = current_time - start_time;
+            for(int i = 0;i < joint_nums;i++)
+            {
+                std::array<double, 3> target;
+                target = fourier_serise(time, A_[i], B_[i], C_[i]);
+                target_positions_[i] = target[0];
+                target_velocities_[i] = target[1];
+            }
+
             // for(uint8_t i = 0;i < joint_nums;i++)
             // {
             //     RCLCPP_INFO(get_logger(), "current_positions[%d] : %f", i, current_positions[i]);
             // }
-            double calculate_result[288];
-            get_Regression(calculate_result, current_positions, {0,0,0,0,0,0}, {0,0,0,0,0,0});
-            // double force[6];
+            // double calculate_result[288];
+            // get_Regression(calculate_result, current_positions, {0,0,0,0,0,0}, {0,0,0,0,0,0});
+            // Eigen::Map<Eigen::Matrix<double, 6, 48, Eigen::RowMajor>> Regression_Matrix(calculate_result);
+            // Eigen::VectorXd force = Regression_Matrix * PA_;
+            // RCLCPP_INFO(get_logger(), "calculate force result");
             // for(uint8_t i = 0;i < joint_nums;i++)
             // {
-            //     double sum = 0;
-            //     for(uint8_t j = 0;j < 48;j++)
-            //     {
-            //         sum += calculate_result[48*i + j] * PA_[j];
-            //     }
-            //     force[i] = sum;
+            //     RCLCPP_INFO(get_logger(), "force %d : %f", i, force[i]);
+            //     data_->ctrl[joint_id_map[i]] = force[i];
             // }
-            Eigen::Map<Eigen::Matrix<double, 6, 48, Eigen::RowMajor>> Regression_Matrix(calculate_result);
-            Eigen::VectorXd force = Regression_Matrix * PA_;
-            RCLCPP_INFO(get_logger(), "calculate force result");
-            for(uint8_t i = 0;i < joint_nums;i++)
-            {
-                RCLCPP_INFO(get_logger(), "force %d : %f", i, force[i]);
-                data_->ctrl[joint_id_map[i]] = force[i];
-            }
-            // PID_control(0, 20, 0);
-            // PID_control(1, 80, 10);
-            // PID_control(2, 60, 5);
-            // PID_control(3, 30, 0);
-            // PID_control(4, 20, 0);
-            // PID_control(5, 20, 0);
+            PID_control(0, 20, 5);
+            PID_control(1, 80, 20);
+            PID_control(2, 60, 10);
+            PID_control(3, 40, 5);
+            PID_control(4, 20, 3);
+            PID_control(5, 10, 1.2);
 
             // RCLCPP_INFO(get_logger(), "force0 %f", data_->ctrl[joint_id_map[0]]);
             // RCLCPP_INFO(get_logger(), "force1 %f", data_->ctrl[joint_id_map[1]]);
@@ -368,8 +411,8 @@ class Ur5e_Node : public rclcpp::Node
             if(mod_ctrl && body_id != -1)
             {
                 force_vector[0] = dx * force_scale;
-                force_vector[1] = 0;
-                force_vector[2] = dy * force_scale;
+                force_vector[1] = dy * force_scale;
+                force_vector[2] = 0.0;
                 data_->xfrc_applied[6 * body_id + 0] = force_vector[0];  // Fx
                 data_->xfrc_applied[6 * body_id + 1] = force_vector[1];  // Fy
                 data_->xfrc_applied[6 * body_id + 2] = force_vector[2];  // Fz
@@ -386,22 +429,43 @@ class Ur5e_Node : public rclcpp::Node
         {
             auto message = sensor_msgs::msg::JointState();
             message.header.stamp = this->now();
-            message.name = joint_names;
             message.position.resize(6);
             message.velocity.resize(6);
             message.effort.resize(6);
+
+            auto message1 = sensor_msgs::msg::JointState();
+            message1.header.stamp = this->now();
+            message1.position.resize(6);
+            message1.velocity.resize(6);
 
             for(int i = 0;i < joint_nums;i++)
             {
                 message.position[i] = current_positions[i];
                 message.velocity[i] = current_velocities[i];
+                message.effort[i] = effort[i];
+                message1.position[i] = target_positions[i];
+                message1.velocity[i] = target_velocities[i];
             }
             
-            
-
-            
             joint_state_pub_->publish(message);
+            target_state_pub_->publish(message1);
+        }
 
+        std::array<double, 3> fourier_serise(double t, std::array<double, 5> A, std::array<double, 5> B,double C)
+        {
+            double q = C, qd = 0, qdd = 0;
+            double w = 2 * M_PI * 0.1;
+            for(int k = 1;k <= 5;k++)
+            {
+                q +=  A[k-1]/(w*k) * sin(k*w*t) - B[k-1]/(w*k) * cos(k*w*t);
+                qd += A[k-1] * cos(k*w*t) + B[k-1] * sin(k*w*t);
+                qdd += -A[k-1] * k * w * sin(k*w*t) + B[k-1] * k * w * cos(k*w*t);
+            }
+            std::array<double, 3> target;
+            target[0] = q;
+            target[1] = qd;
+            target[2] = qdd;
+            return target;
         }
 
         std::array<double, 6> target_positions_;
@@ -413,12 +477,16 @@ class Ur5e_Node : public rclcpp::Node
         GLFWwindow* window_ = nullptr;
 
         std::vector<std::string> joint_names;
+        std::vector<std::string> sensor_names;
         uint8_t joint_nums = 6;
+        double start_time;
         // 关节ID映射表
         std::map<int, int> joint_id_map;
+        std::map<int, int> sensor_id_map;
 
         // ROS 接口
         rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_state_pub_;
+        rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr target_state_pub_;
         rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr control_sub_;
         
         // 渲染配置变量
@@ -447,7 +515,9 @@ class Ur5e_Node : public rclcpp::Node
         std::array<int, 6> qvel_adr_;
         std::array<double, 6> current_positions;
         std::array<double, 6> current_velocities;
-        std::array<double, 6> current_accelerations;
+        std::array<double, 6> effort;
+        std::array<double, 6> target_positions;
+        std::array<double, 6> target_velocities;
         
         // 互斥锁保护共享数据访问
         std::mutex data_mutex_;
@@ -456,6 +526,9 @@ class Ur5e_Node : public rclcpp::Node
         // 最小惯性参数集和傅里叶级数系数
         Eigen::VectorXd PA_ = Eigen::VectorXd::Zero(48);
         std::vector<double> fourier_series_;
+        std::vector<std::array<double, 5>> A_;
+        std::vector<std::array<double, 5>> B_;
+        std::array<double, 5> C_;
 
         rclcpp::TimerBase::SharedPtr timer_;
 
@@ -466,6 +539,11 @@ int main(int argc, char** argv)
 {
     rclcpp::init(argc,argv);
     auto ur5e_node = std::make_shared<Ur5e_Node>("ur5e_node");
+    rclcpp::executors::MultiThreadedExecutor executor;
+    executor.add_node(ur5e_node);
+    std::thread spin_thread([&executor]() {
+        executor.spin();
+    });
     ur5e_node->run();
     rclcpp::shutdown();
     return 0;

@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../build/ur5e_description/ur5e_description.egg-info/PKG-INFO
+../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt
+../../build/ur5e_description/ur5e_description.egg-info/dependency_links.txt
+../../build/ur5e_description/ur5e_description.egg-info/requires.txt
+../../build/ur5e_description/ur5e_description.egg-info/top_level.txt
+../../build/ur5e_description/ur5e_description.egg-info/zip-safe
+resource/ur5e_description
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+ur5e_description/__init__.py

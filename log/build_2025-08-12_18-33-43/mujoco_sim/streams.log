@@ -1,8 +1,0 @@
-[0.010s] Invoking command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24
-[0.070s] [ 50%] [32m[1mLinking CXX executable ur5e_control[0m
-[0.110s] /usr/bin/ld: 找不到 -lZippy: 没有那个文件或目录
-[0.192s] collect2: error: ld returned 1 exit status
-[0.193s] gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:186：ur5e_control] 错误 1
-[0.194s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
-[0.194s] gmake: *** [Makefile:146：all] 错误 2
-[0.197s] Invoked command in '/home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/ws_moveit/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim -- -j24 -l24

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim
+CMAKE_SOURCE_DIR = /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim
+CMAKE_BINARY_DIR = /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/src/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim /home/xiatenghui/workspace/mujoco_ws/build/mujoco_sim/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

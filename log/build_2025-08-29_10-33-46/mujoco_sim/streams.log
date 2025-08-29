@@ -1,0 +1,108 @@
+[0.151s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim -DCMAKE_INSTALL_PREFIX=/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim
+[0.230s] -- The C compiler identification is GNU 13.3.0
+[0.289s] -- The CXX compiler identification is GNU 13.3.0
+[0.307s] -- Detecting C compiler ABI info
+[0.387s] -- Detecting C compiler ABI info - done
+[0.394s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.394s] -- Detecting C compile features
+[0.394s] -- Detecting C compile features - done
+[0.403s] -- Detecting CXX compiler ABI info
+[0.484s] -- Detecting CXX compiler ABI info - done
+[0.490s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.490s] -- Detecting CXX compile features
+[0.491s] -- Detecting CXX compile features - done
+[0.496s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.604s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.685s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.718s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.728s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.741s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.756s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.818s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.821s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.893s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.909s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.927s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.988s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.045s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.129s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.130s] -- Configured cppcheck include dirs: /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/include
+[1.130s] -- Configured cppcheck exclude dirs and/or files: 
+[1.130s] -- Added test 'lint_cmake' to check CMake code style
+[1.131s] -- Added test 'uncrustify' to check C / C++ code style
+[1.131s] -- Configured uncrustify additional arguments: 
+[1.132s] -- Added test 'xmllint' to check XML markup files
+[1.133s] -- Configuring done (1.0s)
+[1.145s] -- Generating done (0.0s)
+[1.149s] -- Build files have been written to: /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim
+[1.157s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim -DCMAKE_INSTALL_PREFIX=/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim
+[1.158s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[1.216s] [ 33%] [32mBuilding CXX object CMakeFiles/ur5e_control.dir/src/ur5e_control.cpp.o[0m
+[1.217s] [ 66%] [32mBuilding CXX object CMakeFiles/ur5e_control.dir/src/get_Regression.cpp.o[0m
+[3.429s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:432:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::bottom[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[3.429s]   432 |         mjrRect rect_ = {0[01;35m[K}[m[K;
+[3.429s]       |                           [01;35m[K^[m[K
+[3.429s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:432:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[3.429s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:432:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[3.444s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In lambda function:
+[3.444s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:69:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Km[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.444s]    69 |             mjcb_control = []([01;35m[Kconst mjModel* m[m[K, mjData* d) {
+[3.444s]       |                               [01;35m[K~~~~~~~~~~~~~~~^[m[K
+[3.444s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In constructor ‘[01m[KUr5e_Node::[01;32m[KUr5e_Node[m[K(std::string)[m[K’:
+[3.444s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:74:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[3.444s]    74 |             for (int i = 0; [01;35m[Ki < joint_names.size()[m[K; i++)
+[3.444s]       |                             [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[3.447s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Krun[m[K()[m[K’:
+[3.447s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:120:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+[3.447s]   120 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+[3.447s]       |                                                     [01;35m[K^~[m[K
+[3.447s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:115:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.447s]   115 |                 double [01;35m[Kdt[m[K = now - last_update;
+[3.447s]       |                        [01;35m[K^~[m[K
+[3.448s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Krendering_thread[m[K()[m[K’:
+[3.448s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:194:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+[3.448s]   194 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+[3.448s]       |                                                     [01;35m[K^~[m[K
+[3.668s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Kkeyboard[m[K(GLFWwindow*, int, int, int, int)[m[K’:
+[3.668s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:302:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.668s]   302 |         void keyboard([01;35m[KGLFWwindow* window[m[K, int key, int scancode, int act, int mods)
+[3.668s]       |                       [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[3.668s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:302:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.668s]   302 |         void keyboard(GLFWwindow* window, int key, [01;35m[Kint scancode[m[K, int act, int mods)
+[3.668s]       |                                                    [01;35m[K~~~~^~~~~~~~[m[K
+[3.668s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:302:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.668s]   302 |         void keyboard(GLFWwindow* window, int key, int scancode, int act, [01;35m[Kint mods[m[K)
+[3.668s]       |                                                                           [01;35m[K~~~~^~~~[m[K
+[3.669s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:[m[K In member function ‘[01m[Kvoid Ur5e_Node::[01;32m[Kmouse_button[m[K(GLFWwindow*, int, int, int)[m[K’:
+[3.669s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:319:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbutton[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.669s]   319 |         void mouse_button(GLFWwindow* window, [01;35m[Kint button[m[K, int act, int mods)
+[3.669s]       |                                               [01;35m[K~~~~^~~~~~[m[K
+[3.669s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:319:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kact[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.669s]   319 |         void mouse_button(GLFWwindow* window, int button, [01;35m[Kint act[m[K, int mods)
+[3.669s]       |                                                           [01;35m[K~~~~^~~[m[K
+[3.669s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/ur5e_control.cpp:319:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.669s]   319 |         void mouse_button(GLFWwindow* window, int button, int act, [01;35m[Kint mods[m[K)
+[3.669s]       |                                                                    [01;35m[K~~~~^~~~[m[K
+[5.788s] [100%] [32m[1mLinking CXX executable ur5e_control[0m
+[6.059s] [100%] Built target ur5e_control
+[6.068s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[6.075s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim
+[6.080s] -- Install configuration: ""
+[6.080s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/ur5e_control
+[6.082s] -- Set non-toolchain portion of runtime path of "/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/ur5e_control" to ""
+[6.082s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/package_run_dependencies/mujoco_sim
+[6.082s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/parent_prefix_path/mujoco_sim
+[6.082s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/ament_prefix_path.sh
+[6.082s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/ament_prefix_path.dsv
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/path.sh
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/path.dsv
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.bash
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.sh
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.zsh
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.dsv
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.dsv
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/packages/mujoco_sim
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/cmake/mujoco_simConfig.cmake
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/cmake/mujoco_simConfig-version.cmake
+[6.083s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.xml
+[6.084s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim

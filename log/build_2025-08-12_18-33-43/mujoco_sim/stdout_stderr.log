@@ -1,6 +1,0 @@
-[ 50%] [32m[1mLinking CXX executable ur5e_control[0m
-/usr/bin/ld: 找不到 -lZippy: 没有那个文件或目录
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/ur5e_control.dir/build.make:186：ur5e_control] 错误 1
-gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/ur5e_control.dir/all] 错误 2
-gmake: *** [Makefile:146：all] 错误 2
