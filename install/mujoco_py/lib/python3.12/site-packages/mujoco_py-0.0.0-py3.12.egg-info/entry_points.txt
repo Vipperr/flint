@@ -1,0 +1,2 @@
+[console_scripts]
+data_collection_ur5e = mujoco_py.data_collection_ur5e:main

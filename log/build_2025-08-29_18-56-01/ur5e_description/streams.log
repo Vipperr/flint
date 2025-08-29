@@ -1,0 +1,46 @@
+[0.896s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log --single-version-externally-managed install_data
+[1.079s] running egg_info
+[1.079s] creating ../../build/ur5e_description/ur5e_description.egg-info
+[1.090s] writing ../../build/ur5e_description/ur5e_description.egg-info/PKG-INFO
+[1.090s] writing dependency_links to ../../build/ur5e_description/ur5e_description.egg-info/dependency_links.txt
+[1.090s] writing requirements to ../../build/ur5e_description/ur5e_description.egg-info/requires.txt
+[1.090s] writing top-level names to ../../build/ur5e_description/ur5e_description.egg-info/top_level.txt
+[1.090s] writing manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+[1.114s] reading manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+[1.114s] writing manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+[1.114s] running build
+[1.114s] running build_py
+[1.114s] creating /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build
+[1.115s] creating /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib
+[1.115s] creating /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib/ur5e_description
+[1.115s] copying ur5e_description/__init__.py -> /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib/ur5e_description
+[1.115s] running install
+[1.119s] running install_lib
+[1.131s] creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description
+[1.131s] copying /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib/ur5e_description/__init__.py -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description
+[1.131s] byte-compiling /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description/__init__.py to __init__.cpython-312.pyc
+[1.131s] running install_data
+[1.131s] creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index
+[1.131s] creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index/resource_index
+[1.131s] creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index/resource_index/packages
+[1.131s] copying resource/ur5e_description -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index/resource_index/packages
+[1.131s] copying package.xml -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description
+[1.132s] creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/launch
+[1.132s] creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.132s] copying meshes/link2.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.132s] copying meshes/base_link.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.134s] copying meshes/link3.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.134s] copying meshes/link5.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.134s] copying meshes/link6.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.134s] copying meshes/link4.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.135s] copying meshes/link1.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+[1.136s] creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+[1.136s] copying urdf/ur5e_description (副本).xml -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+[1.136s] copying urdf/ur5e_description.csv -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+[1.136s] copying urdf/ur5e_description.xml -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+[1.136s] copying urdf/ur5e_description.urdf -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+[1.136s] running install_egg_info
+[1.149s] Copying ../../build/ur5e_description/ur5e_description.egg-info to /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description-0.0.0-py3.12.egg-info
+[1.149s] running install_scripts
+[1.233s] writing list of installed files to '/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log'
+[1.252s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log --single-version-externally-managed install_data

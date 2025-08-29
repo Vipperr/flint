@@ -74,35 +74,35 @@
       </body>
     </body>
     <body name="right_shoulder" pos="0.005 -0.13909 1.0415" quat="0.996195 -0.0871543 0 0">
-      <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+      <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
       <joint name="joint0" pos="0 0 0" axis="0 1 0" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint1"/>
       <body name="right_posterior_arm_root" pos="0.000294 -0.069 0">
-        <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+        <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
         <joint name="joint1" pos="0 0 0" axis="1 0 0" range="-1.5708 0.1745" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
         <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint2"/>
         <body name="right_posterior_arm" pos="-0.0001 0 -0.11197">
-          <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+          <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
           <joint name="joint2" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
           <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint3"/>
           <body name="right_elbow" pos="0 0.02901 -0.198">
-            <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+            <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
             <joint name="joint3" pos="0 0 0" axis="0 1 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
             <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint4"/>
             <body name="right_forearm_root" pos="0 -0.0555 -0.14721">
-              <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+              <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
               <joint name="joint4" pos="0 0 0" axis="0 1 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
               <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint5"/>
               <body name="right_forearm" pos="0 0.02768 -0.112">
-                <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+                <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
                 <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
                 <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint6"/>
                 <body name="right_forearm_b" pos="0 0 -0.20252">
-                  <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+                  <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
                   <joint name="joint6" pos="0 0 0" axis="0 1 0" range="-0.5236 0.5236" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
                   <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint7"/>
                   <body name="right_wrist" pos="-0.014 0 -0.04456">
-                    <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+                    <inertial pos="0 0 0" mass="2" diaginertia="0.5 0.5 0.5"/>
                     <joint name="joint7" pos="0 0 0" axis="1 0 0" range="-0.7854 0.7854" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint8"/>
                     <geom pos="0.010324 -0.01302 -0.09651" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_good_hand"/>

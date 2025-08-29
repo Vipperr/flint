@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "data_collection_ur5e = mujoco_py.data_collection_ur5e:main"
         ],
     },
 )

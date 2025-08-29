@@ -19,7 +19,7 @@
   </link>      
 
   <link name="body_link">
-    <!-- <visual>
+    <visual>
       <geometry>
         <cylinder length="0.95" radius="0.15"/>
       </geometry>
@@ -27,7 +27,7 @@
         <color rgba="0.0 0.0 1.0 0.5"/>
       </material>
       <origin rpy="0 0 0" xyz="0 0 0.625"/>
-    </visual> -->
+    </visual>
     <collision>
       <geometry>
         <cylinder length="0.95" radius="0.15"/>
