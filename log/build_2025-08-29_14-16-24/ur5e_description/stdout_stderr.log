@@ -1,0 +1,44 @@
+running egg_info
+creating ../../build/ur5e_description/ur5e_description.egg-info
+writing ../../build/ur5e_description/ur5e_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/ur5e_description/ur5e_description.egg-info/dependency_links.txt
+writing requirements to ../../build/ur5e_description/ur5e_description.egg-info/requires.txt
+writing top-level names to ../../build/ur5e_description/ur5e_description.egg-info/top_level.txt
+writing manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+reading manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/ur5e_description/ur5e_description.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build
+creating /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib
+creating /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib/ur5e_description
+copying ur5e_description/__init__.py -> /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib/ur5e_description
+running install
+running install_lib
+creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description
+copying /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build/lib/ur5e_description/__init__.py -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description
+byte-compiling /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index
+creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index/resource_index
+creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index/resource_index/packages
+copying resource/ur5e_description -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ament_index/resource_index/packages
+copying package.xml -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description
+creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/launch
+creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+copying meshes/link2.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+copying meshes/base_link.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+copying meshes/link3.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+copying meshes/link5.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+copying meshes/link6.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+copying meshes/link4.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+copying meshes/link1.STL -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/meshes
+creating /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+copying urdf/ur5e_description (副本).xml -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+copying urdf/ur5e_description.csv -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+copying urdf/ur5e_description.xml -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+copying urdf/ur5e_description.urdf -> /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/urdf
+running install_egg_info
+Copying ../../build/ur5e_description/ur5e_description.egg-info to /home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages/ur5e_description-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log'

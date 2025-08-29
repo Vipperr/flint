@@ -1,0 +1,71 @@
+[0.314s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[0.378s] [ 60%] Built target ur5e_control
+[0.378s] [ 80%] [32mBuilding CXX object CMakeFiles/flint_control.dir/src/flint_control.cpp.o[0m
+[2.245s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:508:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::bottom[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[2.245s]   508 |         mjrRect rect_ = {0[01;35m[K}[m[K;
+[2.245s]       |                           [01;35m[K^[m[K
+[2.245s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:508:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[2.245s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:508:27:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KmjrRect_::height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[2.269s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:[m[K In lambda function:
+[2.269s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:104:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Km[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.269s]   104 |             mjcb_control = []([01;35m[Kconst mjModel* m[m[K, mjData* d) {
+[2.270s]       |                               [01;35m[K~~~~~~~~~~~~~~~^[m[K
+[2.270s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:[m[K In constructor ‘[01m[KFlint_Node::[01;32m[KFlint_Node[m[K(std::string)[m[K’:
+[2.270s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:109:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.270s]   109 |             for (int i = 0; [01;35m[Ki < joint_names.size()[m[K; i++)
+[2.270s]       |                             [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[2.272s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:[m[K In member function ‘[01m[Kvoid Flint_Node::[01;32m[Krun[m[K()[m[K’:
+[2.272s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:165:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+[2.272s]   165 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+[2.273s]       |                                                     [01;35m[K^~[m[K
+[2.273s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:160:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.273s]   160 |                 double [01;35m[Kdt[m[K = now - last_update;
+[2.273s]       |                        [01;35m[K^~[m[K
+[2.273s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:[m[K In member function ‘[01m[Kvoid Flint_Node::[01;32m[Krendering_thread[m[K()[m[K’:
+[2.273s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:239:53:[m[K [01;35m[Kwarning: [m[Kempty parentheses were disambiguated as a function declaration [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvexing-parse-Wvexing-parse]8;;[m[K]
+[2.274s]   239 |                     std::lock_guard<std::mutex> lock[01;35m[K()[m[K;
+[2.274s]       |                                                     [01;35m[K^~[m[K
+[2.275s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:[m[K In member function ‘[01m[Kvoid Flint_Node::[01;32m[Kkeyboard[m[K(GLFWwindow*, int, int, int, int)[m[K’:
+[2.275s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:353:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.275s]   353 |         void keyboard([01;35m[KGLFWwindow* window[m[K, int key, int scancode, int act, int mods)
+[2.275s]       |                       [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[2.275s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:353:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.275s]   353 |         void keyboard(GLFWwindow* window, int key, [01;35m[Kint scancode[m[K, int act, int mods)
+[2.275s]       |                                                    [01;35m[K~~~~^~~~~~~~[m[K
+[2.275s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:353:79:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.275s]   353 |         void keyboard(GLFWwindow* window, int key, int scancode, int act, [01;35m[Kint mods[m[K)
+[2.275s]       |                                                                           [01;35m[K~~~~^~~~[m[K
+[2.275s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:[m[K In member function ‘[01m[Kvoid Flint_Node::[01;32m[Kmouse_button[m[K(GLFWwindow*, int, int, int)[m[K’:
+[2.276s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:370:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbutton[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.276s]   370 |         void mouse_button(GLFWwindow* window, [01;35m[Kint button[m[K, int act, int mods)
+[2.276s]       |                                               [01;35m[K~~~~^~~~~~[m[K
+[2.276s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:370:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kact[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.276s]   370 |         void mouse_button(GLFWwindow* window, int button, [01;35m[Kint act[m[K, int mods)
+[2.276s]       |                                                           [01;35m[K~~~~^~~[m[K
+[2.276s] [01m[K/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim/src/flint_control.cpp:370:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.276s]   370 |         void mouse_button(GLFWwindow* window, int button, int act, [01;35m[Kint mods[m[K)
+[2.276s]       |                                                                    [01;35m[K~~~~^~~~[m[K
+[4.137s] [100%] [32m[1mLinking CXX executable flint_control[0m
+[4.357s] [100%] Built target flint_control
+[4.370s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[4.378s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim
+[4.384s] -- Install configuration: ""
+[4.384s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/ur5e_control
+[4.384s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/flint_control
+[4.386s] -- Set non-toolchain portion of runtime path of "/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/flint_control" to ""
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/package_run_dependencies/mujoco_sim
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/parent_prefix_path/mujoco_sim
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/ament_prefix_path.sh
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/ament_prefix_path.dsv
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/path.sh
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/path.dsv
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.bash
+[4.386s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.sh
+[4.387s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.zsh
+[4.387s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/local_setup.dsv
+[4.387s] -- Installing: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.dsv
+[4.387s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/packages/mujoco_sim
+[4.387s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/cmake/mujoco_simConfig.cmake
+[4.387s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/cmake/mujoco_simConfig-version.cmake
+[4.387s] -- Up-to-date: /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.xml
+[4.388s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim

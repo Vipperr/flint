@@ -29,8 +29,19 @@ add_executable(ur5e_control
 src/ur5e_control.cpp
 src/get_Regression.cpp)
 
+add_executable(flint_control 
+src/flint_control.cpp)
+
 # 处理非ROS包依赖
 target_link_libraries(ur5e_control
+  libmujoco.so
+  glfw
+  OpenXLSX
+  pugixml
+  Eigen3::Eigen
+  )
+
+target_link_libraries(flint_control
   libmujoco.so
   glfw
   OpenXLSX
@@ -43,8 +54,16 @@ ament_target_dependencies(ur5e_control
 rclcpp
 sensor_msgs)
 
+ament_target_dependencies(flint_control 
+rclcpp
+sensor_msgs)
+
 install(TARGETS
 ur5e_control
+DESTINATION lib/${PROJECT_NAME})
+
+install(TARGETS
+flint_control
 DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

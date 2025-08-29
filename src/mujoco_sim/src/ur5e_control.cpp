@@ -443,8 +443,8 @@ class Ur5e_Node : public rclcpp::Node
                 message.position[i] = current_positions[i];
                 message.velocity[i] = current_velocities[i];
                 message.effort[i] = effort[i];
-                message1.position[i] = target_positions[i];
-                message1.velocity[i] = target_velocities[i];
+                message1.position[i] = target_positions_[i];
+                message1.velocity[i] = target_velocities_[i];
             }
             
             joint_state_pub_->publish(message);
@@ -516,8 +516,6 @@ class Ur5e_Node : public rclcpp::Node
         std::array<double, 6> current_positions;
         std::array<double, 6> current_velocities;
         std::array<double, 6> effort;
-        std::array<double, 6> target_positions;
-        std::array<double, 6> target_velocities;
         
         // 互斥锁保护共享数据访问
         std::mutex data_mutex_;

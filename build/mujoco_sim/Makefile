@@ -210,6 +210,43 @@ ur5e_control/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_control.dir/build.make CMakeFiles/ur5e_control.dir/build
 .PHONY : ur5e_control/fast
 
+#=============================================================================
+# Target rules for targets named flint_control
+
+# Build rule for target.
+flint_control: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 flint_control
+.PHONY : flint_control
+
+# fast build rule for target.
+flint_control/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flint_control.dir/build.make CMakeFiles/flint_control.dir/build
+.PHONY : flint_control/fast
+
+src/flint_control.o: src/flint_control.cpp.o
+.PHONY : src/flint_control.o
+
+# target to build an object file
+src/flint_control.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flint_control.dir/build.make CMakeFiles/flint_control.dir/src/flint_control.cpp.o
+.PHONY : src/flint_control.cpp.o
+
+src/flint_control.i: src/flint_control.cpp.i
+.PHONY : src/flint_control.i
+
+# target to preprocess a source file
+src/flint_control.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flint_control.dir/build.make CMakeFiles/flint_control.dir/src/flint_control.cpp.i
+.PHONY : src/flint_control.cpp.i
+
+src/flint_control.s: src/flint_control.cpp.s
+.PHONY : src/flint_control.s
+
+# target to generate assembly for a file
+src/flint_control.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flint_control.dir/build.make CMakeFiles/flint_control.dir/src/flint_control.cpp.s
+.PHONY : src/flint_control.cpp.s
+
 src/get_Regression.o: src/get_Regression.cpp.o
 .PHONY : src/get_Regression.o
 
@@ -273,7 +310,11 @@ help:
 	@echo "... test"
 	@echo "... mujoco_sim_uninstall"
 	@echo "... uninstall"
+	@echo "... flint_control"
 	@echo "... ur5e_control"
+	@echo "... src/flint_control.o"
+	@echo "... src/flint_control.i"
+	@echo "... src/flint_control.s"
 	@echo "... src/get_Regression.o"
 	@echo "... src/get_Regression.i"
 	@echo "... src/get_Regression.s"

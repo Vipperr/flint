@@ -1,4 +1,5 @@
 /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/ur5e_control
+/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/mujoco_sim/flint_control
 /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/package_run_dependencies/mujoco_sim
 /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/ament_index/resource_index/parent_prefix_path/mujoco_sim
 /home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/environment/ament_prefix_path.sh

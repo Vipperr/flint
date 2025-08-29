@@ -1,6 +1,7 @@
 /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/uninstall.dir
 /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/mujoco_sim_uninstall.dir
 /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/ur5e_control.dir
+/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/flint_control.dir
 /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/test.dir
 /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/edit_cache.dir
 /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim/CMakeFiles/rebuild_cache.dir

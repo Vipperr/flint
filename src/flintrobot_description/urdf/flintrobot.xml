@@ -1,0 +1,282 @@
+<mujoco model="flintrobot">
+  <compiler angle="radian" meshdir="../meshes/"/>
+
+  <asset>
+    <mesh name="flint_wheel1" file="flint_wheel1.stl"/>
+    <mesh name="flint_body" file="flint_body.stl"/>
+    <mesh name="flint_neck0" file="flint_neck0.stl"/>
+    <mesh name="flint_neck1" file="flint_neck1.stl"/>
+    <mesh name="flint_neck2" file="flint_neck2.stl"/>
+    <mesh name="flint_head" file="flint_head.stl"/>
+    <mesh name="flint_joint1" file="flint_joint1.stl"/>
+    <mesh name="flint_joint2" file="flint_joint2.stl"/>
+    <mesh name="flint_joint3" file="flint_joint3.stl"/>
+    <mesh name="flint_joint4" file="flint_joint4.stl"/>
+    <mesh name="flint_joint5" file="flint_joint5.stl"/>
+    <mesh name="flint_joint6" file="flint_joint6.stl"/>
+    <mesh name="flint_joint7" file="flint_joint7.stl"/>
+    <mesh name="flint_joint8" file="flint_joint8.stl"/>
+    <mesh name="flint_good_hand" file="flint_good_hand.stl"/>
+    <mesh name="flint_hand_thumb_joint0" file="flint_hand_thumb_joint0.stl"/>
+    <mesh name="flint_hand_thumb_joint1" file="flint_hand_thumb_joint1.stl"/>
+    <mesh name="flint_hand_thumb_joint2" file="flint_hand_thumb_joint2.stl"/>
+    <mesh name="flint_hand_thumb_joint3" file="flint_hand_thumb_joint3.stl"/>
+    <mesh name="flint_hand_finger_joint0" file="flint_hand_finger_joint0.stl"/>
+    <mesh name="flint_hand_finger_joint1" file="flint_hand_finger_joint1.stl"/>
+    <mesh name="flint_joint11" content_type="model/stl" file="flint_joint1.stl" scale="1 -1 1"/>
+    <mesh name="flint_joint21" content_type="model/stl" file="flint_joint2.stl" scale="1 -1 1"/>
+    <mesh name="flint_joint31" content_type="model/stl" file="flint_joint3.stl" scale="1 -1 1"/>
+    <mesh name="flint_joint41" content_type="model/stl" file="flint_joint4.stl" scale="1 -1 1"/>
+    <mesh name="flint_joint51" content_type="model/stl" file="flint_joint5.stl" scale="1 -1 1"/>
+    <mesh name="flint_joint61" content_type="model/stl" file="flint_joint6.stl" scale="1 -1 1"/>
+    <mesh name="flint_joint71" content_type="model/stl" file="flint_joint7.stl" scale="1 -1 1"/>
+    <mesh name="flint_joint81" content_type="model/stl" file="flint_joint8.stl" scale="1 -1 1"/>
+    <mesh name="flint_good_hand1" content_type="model/stl" file="flint_good_hand.stl" scale="1 -1 1"/>
+    <mesh name="flint_hand_thumb_joint01" content_type="model/stl" file="flint_hand_thumb_joint0.stl" scale="1 -1 1"/>
+    <mesh name="flint_hand_thumb_joint11" content_type="model/stl" file="flint_hand_thumb_joint1.stl" scale="1 -1 1"/>
+    <mesh name="flint_hand_thumb_joint21" content_type="model/stl" file="flint_hand_thumb_joint2.stl" scale="1 -1 1"/>
+    <mesh name="flint_hand_thumb_joint31" content_type="model/stl" file="flint_hand_thumb_joint3.stl" scale="1 -1 1"/>
+    <mesh name="flint_hand_finger_joint01" content_type="model/stl" file="flint_hand_finger_joint0.stl" scale="1 -1 1"/>
+    <mesh name="flint_hand_finger_joint11" content_type="model/stl" file="flint_hand_finger_joint1.stl" scale="1 -1 1"/>
+  </asset>
+
+  <worldbody>
+    <geom pos="0 0.171517 0.121921" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_wheel1"/>
+    <geom pos="0 -0.171517 0.121921" quat="-3.67321e-06 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_wheel1"/>
+    <geom pos="0 0 0.16" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_body"/>
+    <body name="head_base_raise_joint_x" pos="0.01385 0 1.1017">
+      <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+      <joint name="head_base_raise_joint_x" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.07044" actuatorfrcrange="-50 50" frictionloss="2.0" damping="0.2"/>
+      <body name="head_base_raise_joint_z">
+        <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+        <joint name="head_base_raise_joint_z" pos="0 0 0" axis="0 0 1" type="slide" range="0 0.03792" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+        <body name="head_base_raise_joint_pitch">
+          <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+          <joint name="head_base_raise_joint_pitch" pos="0 0 0" axis="0 1 0" range="0 0.449946" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_neck0"/>
+          <body name="head_joint_1" pos="0 0 0.0553">
+            <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+            <joint name="head_joint_1" pos="0 0 0" axis="0 0 1" range="-0.7854 0.7854" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_neck1"/>
+            <body name="head_joint_2" pos="-0.0016 0.018 0.0816">
+              <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+              <joint name="head_joint_2" pos="0 0 0" axis="0 1 0" range="-0.3491 0.7854" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_neck2"/>
+              <body name="head" pos="-0.06887 -0.020278 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+                <joint name="head_joint_3" pos="0 0 0" axis="1 0 0" range="-0.3491 0.3491" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_head"/>
+                <geom size="0.01 0.09 0.01" pos="0.11332 0.002304 0" quat="0.998436 0 -0.0559086 0" type="box" contype="0" conaffinity="0" group="1" density="0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="right_shoulder" pos="0.005 -0.13909 1.0415" quat="0.996195 -0.0871543 0 0">
+      <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+      <joint name="joint0" pos="0 0 0" axis="0 1 0" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint1"/>
+      <body name="right_posterior_arm_root" pos="0.000294 -0.069 0">
+        <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+        <joint name="joint1" pos="0 0 0" axis="1 0 0" range="-1.5708 0.1745" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint2"/>
+        <body name="right_posterior_arm" pos="-0.0001 0 -0.11197">
+          <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+          <joint name="joint2" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint3"/>
+          <body name="right_elbow" pos="0 0.02901 -0.198">
+            <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+            <joint name="joint3" pos="0 0 0" axis="0 1 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint4"/>
+            <body name="right_forearm_root" pos="0 -0.0555 -0.14721">
+              <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+              <joint name="joint4" pos="0 0 0" axis="0 1 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint5"/>
+              <body name="right_forearm" pos="0 0.02768 -0.112">
+                <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+                <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint6"/>
+                <body name="right_forearm_b" pos="0 0 -0.20252">
+                  <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+                  <joint name="joint6" pos="0 0 0" axis="0 1 0" range="-0.5236 0.5236" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint7"/>
+                  <body name="right_wrist" pos="-0.014 0 -0.04456">
+                    <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+                    <joint name="joint7" pos="0 0 0" axis="1 0 0" range="-0.7854 0.7854" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint8"/>
+                    <geom pos="0.010324 -0.01302 -0.09651" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_good_hand"/>
+                    <geom size="0.05 0.02 0.05" pos="0.010324 -0.01302 -0.09651" type="box"/>
+                    <body name="right_hand_thumb_0" pos="0.0408 0.01039 -0.0694">
+                      <inertial pos="0 0 0" mass="0.5" diaginertia="0.5 0.5 0.5"/>
+                      <joint name="right_thumb_joint1" pos="0 0 0" axis="0 0 1" range="0 2.0944" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint0"/>
+                      <body name="right_hand_thumb_1" pos="0.010277 -0.01169 0.00121">
+                        <inertial pos="0 0 0" mass="0.5" diaginertia="0.5 0.5 0.5"/>
+                        <joint name="right_thumb_joint2" pos="0 0 0" axis="0 1 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint1"/>
+                        <geom size="0.015 0.0125 0.0125" pos="0.03 0.013 0" type="box"/>
+                        <body name="right_hand_thumb_2" pos="0.061119 0.002 -0.00337">
+                          <inertial pos="0 0 0" mass="0.5" diaginertia="0.5 0.5 0.5"/>
+                          <joint name="right_thumb_joint3" pos="0 0 0" axis="0 1 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint2"/>
+                          <geom size="0.01 0.01 0.01" pos="0.008 0.01 0.003" type="box"/>
+                          <body name="right_hand_thumb_3" pos="0.02197 0.01078 0.00108">
+                            <inertial pos="0 0 0" mass="0.5" diaginertia="0.5 0.5 0.5"/>
+                            <joint name="right_thumb_joint4" pos="0 0 0" axis="0 1 0" range="0 0.7854" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint3"/>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                    <body name="right_finger1_joint1" pos="0.047592 -0.01235 -0.164243" quat="0.999657 0 -0.026177 0">
+                      <joint name="right_finger1_joint1" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint0"/>
+                      <geom size="0.01 0.01 0.0175" pos="0 0 -0.012" type="box"/>
+                      <body name="right_finger1_joint2" pos="1.7e-05 0.0052 -0.030544">
+                        <joint name="right_finger1_joint2" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint1"/>
+                        <geom size="0.01 0.01 0.0175" pos="0 0 -0.032" type="box"/>
+                      </body>
+                    </body>
+                    <body name="right_finger2_joint1" pos="0.021945 -0.01231 -0.165475">
+                      <joint name="right_finger2_joint1" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint0"/>
+                      <geom size="0.01 0.01 0.0175" pos="0 0 -0.012" type="box"/>
+                      <body name="right_finger2_joint2" pos="1.7e-05 0.0052 -0.030544">
+                        <joint name="right_finger2_joint2" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint1"/>
+                        <geom size="0.01 0.01 0.0175" pos="0 0 -0.032" type="box"/>
+                      </body>
+                    </body>
+                    <body name="right_finger3_joint1" pos="-0.003263 -0.01231 -0.165415" quat="0.999657 0 0.026177 0">
+                      <joint name="right_finger3_joint1" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint0"/>
+                      <geom size="0.01 0.01 0.0175" pos="0 0 -0.012" type="box"/>
+                      <body name="right_finger3_joint2" pos="1.7e-05 0.0052 -0.030544">
+                        <joint name="right_finger3_joint2" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint1"/>
+                        <geom size="0.01 0.01 0.0175" pos="0 0 -0.032" type="box"/>
+                      </body>
+                    </body>
+                    <body name="right_finger4_joint1" pos="-0.028492 -0.01231 -0.162315" quat="0.99863 0 0.0523361 0">
+                      <joint name="right_finger4_joint1" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint0"/>
+                      <geom size="0.01 0.01 0.0175" pos="0 0 -0.012" type="box"/>
+                      <body name="right_finger4_joint2" pos="1.7e-05 0.0052 -0.030544">
+                        <joint name="right_finger4_joint2" pos="0 0 0" axis="1 0 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint1"/>
+                        <geom size="0.01 0.01 0.0175" pos="0 0 -0.032" type="box"/>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="left_shoulder" pos="0.005 0.13909 1.0415" quat="0.996195 0.0871543 0 0">
+      <joint name="joint0b" pos="0 0 0" axis="0 1 0" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint11"/>
+      <geom size="0.035 0.038" pos="0 0.065 0" quat="0.707123 0.70709 0 0" type="cylinder"/>
+      <body name="left_posterior_arm_root" pos="0.000294 0.069 0">
+        <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+        <joint name="joint1b" pos="0 0 0" axis="1 0 0" range="-0.1745 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint21"/>
+        <body name="left_posterior_arm" pos="-0.0001 0 -0.11197">
+          <joint name="joint2b" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint31"/>
+          <geom size="0.035 0.115" pos="0 0 -0.06" type="cylinder"/>
+          <body name="left_elbow" pos="0 -0.02901 -0.198">
+            <joint name="joint3b" pos="0 0 0" axis="0 1 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint41"/>
+            <geom size="0.035 0.035 0.0735" pos="0 0.03 -0.0735" type="box"/>
+            <body name="left_forearm_root" pos="0 0.0555 -0.14721">
+              <inertial pos="0 0 0" mass="1" diaginertia="0.5 0.5 0.5"/>
+              <joint name="joint4b" pos="0 0 0" axis="0 1 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint51"/>
+              <body name="left_forearm" pos="0 -0.02768 -0.112">
+                <joint name="joint5b" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint61"/>
+                <geom size="0.035 0.118" pos="0 0 -0.033" type="cylinder"/>
+                <body name="left_forearm_b" pos="0 0 -0.20252">
+                  <joint name="joint6b" pos="0 0 0" axis="0 1 0" range="-0.5236 0.5236" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint71"/>
+                  <geom size="0.035 0.035 0.025" pos="0 0 0.005" type="box"/>
+                  <body name="left_wrist" pos="-0.014 0 -0.04456">
+                    <inertial pos="0 0 0" mass="0.5" diaginertia="0.5 0.5 0.5"/>
+                    <joint name="joint7b" pos="0 0 0" axis="1 0 0" range="-0.7854 0.7854" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_joint81"/>
+                    <geom pos="0.010324 0.01302 -0.09651" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_good_hand1"/>
+                    <body name="left_hand_thumb_0" pos="0.0408 -0.01039 -0.0694">
+                      <inertial pos="0 0 0" mass="0.5" diaginertia="0.5 0.5 0.5"/>
+                      <joint name="left_thumb_joint1" pos="0 0 0" axis="0 0 1" range="-2.0944 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint01"/>
+                      <body name="left_hand_thumb_1" pos="0.010277 0.01169 0.00121">
+                        <inertial pos="0 0 0" mass="0.5" diaginertia="0.5 0.5 0.5"/>
+                        <joint name="left_thumb_joint2" pos="0 0 0" axis="0 1 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint11"/>
+                        <body name="left_hand_thumb_2" pos="0.061119 -0.002 -0.00337">
+                          <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                          <joint name="left_thumb_joint3" pos="0 0 0" axis="0 1 0" range="0 1.5708" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint21"/>
+                          <body name="left_hand_thumb_3" pos="0.02197 -0.01078 0.00108">
+                            <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                            <joint name="left_thumb_joint4" pos="0 0 0" axis="0 1 0" range="0 0.7854" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_thumb_joint31"/>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                    <body name="left_finger1_joint1" pos="0.047592 0.01235 -0.164243" quat="0.999657 0 -0.026177 0">
+                      <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                      <joint name="left_finger1_joint1" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint01"/>
+                      <body name="left_finger1_joint2" pos="1.7e-05 -0.0052 -0.030544">
+                        <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                        <joint name="left_finger1_joint2" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint11"/>
+                      </body>
+                    </body>
+                    <body name="left_finger2_joint1" pos="0.021945 0.01231 -0.165475">
+                      <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                      <joint name="left_finger2_joint1" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint0"/>
+                      <body name="left_finger2_joint2" pos="1.7e-05 -0.0052 -0.030544">
+                        <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                        <joint name="left_finger2_joint2" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint1"/>
+                      </body>
+                    </body>
+                    <body name="left_finger3_joint1" pos="-0.003263 0.01231 -0.165415" quat="0.999657 0 0.026177 0">
+                      <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                      <joint name="left_finger3_joint1" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint0"/>
+                      <body name="left_finger3_joint2" pos="1.7e-05 -0.0052 -0.030544">
+                        <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                        <joint name="left_finger3_joint2" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint1"/>
+                      </body>
+                    </body>
+                    <body name="left_finger4_joint1" pos="-0.028492 0.01231 -0.162315" quat="0.99863 0 0.0523361 0">
+                      <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                      <joint name="left_finger4_joint1" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint0"/>
+                      <body name="left_finger4_joint2" pos="1.7e-05 -0.0052 -0.030544">
+                        <inertial pos="0 0 0" mass="0.1" diaginertia="0.5 0.5 0.5"/>
+                        <joint name="left_finger4_joint2" pos="0 0 0" axis="1 0 0" range="-1.5708 0" actuatorfrcrange="-1000 1000" frictionloss="2.0" damping="0.2"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="flint_hand_finger_joint1"/>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

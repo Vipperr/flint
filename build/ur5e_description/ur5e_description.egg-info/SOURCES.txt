@@ -7,8 +7,19 @@ setup.py
 ../../build/ur5e_description/ur5e_description.egg-info/requires.txt
 ../../build/ur5e_description/ur5e_description.egg-info/top_level.txt
 ../../build/ur5e_description/ur5e_description.egg-info/zip-safe
+meshes/base_link.STL
+meshes/link1.STL
+meshes/link2.STL
+meshes/link3.STL
+meshes/link4.STL
+meshes/link5.STL
+meshes/link6.STL
 resource/ur5e_description
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 ur5e_description/__init__.py
+urdf/ur5e_description (副本).xml
+urdf/ur5e_description.csv
+urdf/ur5e_description.urdf
+urdf/ur5e_description.xml

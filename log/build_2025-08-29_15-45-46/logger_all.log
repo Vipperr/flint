@@ -1,0 +1,292 @@
+[0.066s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.066s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7aafce87b020>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7aafce87acc0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7aafce87acc0>>)
+[0.091s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.091s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.091s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.091s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.091s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.091s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.091s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/xiatenghui/work_space/mujoco_ws'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extension 'ignore'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extension 'ignore_ament_install'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extensions ['colcon_pkg']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extension 'colcon_pkg'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extensions ['colcon_meta']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extension 'colcon_meta'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extensions ['ros']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(src/flintrobot_description) by extension 'ros'
+[0.114s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flintrobot_description' with type 'ros.ament_python' and name 'flintrobot_description'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extension 'ignore'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extension 'ignore_ament_install'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extensions ['colcon_pkg']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extension 'colcon_pkg'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extensions ['colcon_meta']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extension 'colcon_meta'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extensions ['ros']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_py) by extension 'ros'
+[0.115s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mujoco_py' with type 'ros.ament_python' and name 'mujoco_py'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extension 'ignore_ament_install'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extensions ['colcon_pkg']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extension 'colcon_pkg'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extensions ['colcon_meta']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extension 'colcon_meta'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extensions ['ros']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/mujoco_sim) by extension 'ros'
+[0.115s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mujoco_sim' with type 'ros.ament_cmake' and name 'mujoco_sim'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extension 'ignore_ament_install'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extensions ['colcon_pkg']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extension 'colcon_pkg'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extensions ['colcon_meta']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extension 'colcon_meta'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extensions ['ros']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/ur5e_description) by extension 'ros'
+[0.116s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ur5e_description' with type 'ros.ament_python' and name 'ur5e_description'
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.130s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/xiatenghui/work_space/mujoco_ws/install
+[0.131s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 49 installed packages in /home/xiatenghui/moveit2_ws/install
+[0.132s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 337 installed packages in /opt/ros/jazzy
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'cmake_target' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'flintrobot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.163s] DEBUG:colcon.colcon_core.verb:Building package 'flintrobot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description', 'merge_install': False, 'path': '/home/xiatenghui/work_space/mujoco_ws/src/flintrobot_description', 'symlink_install': False, 'test_result_base': None}
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'cmake_target' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.163s] Level 5:colcon.colcon_core.verb:set package 'mujoco_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.163s] DEBUG:colcon.colcon_core.verb:Building package 'mujoco_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py', 'merge_install': False, 'path': '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_py', 'symlink_install': False, 'test_result_base': None}
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'cmake_args' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'cmake_target' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'mujoco_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.164s] DEBUG:colcon.colcon_core.verb:Building package 'mujoco_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim', 'merge_install': False, 'path': '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim', 'symlink_install': False, 'test_result_base': None}
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'cmake_args' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'cmake_target' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.164s] Level 5:colcon.colcon_core.verb:set package 'ur5e_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.164s] DEBUG:colcon.colcon_core.verb:Building package 'ur5e_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description', 'merge_install': False, 'path': '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description', 'symlink_install': False, 'test_result_base': None}
+[0.164s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.165s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.165s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xiatenghui/work_space/mujoco_ws/src/flintrobot_description' with build type 'ament_python'
+[0.165s] Level 1:colcon.colcon_core.shell:create_environment_hook('flintrobot_description', 'ament_prefix_path')
+[0.166s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/hook/ament_prefix_path.ps1'
+[0.167s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/hook/ament_prefix_path.dsv'
+[0.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/hook/ament_prefix_path.sh'
+[0.167s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.167s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.171s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_py' with build type 'ament_python'
+[0.171s] Level 1:colcon.colcon_core.shell:create_environment_hook('mujoco_py', 'ament_prefix_path')
+[0.171s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/hook/ament_prefix_path.ps1'
+[0.172s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/hook/ament_prefix_path.dsv'
+[0.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/hook/ament_prefix_path.sh'
+[0.172s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.172s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.176s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim' with build type 'ament_cmake'
+[0.176s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_sim'
+[0.176s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.176s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.179s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description' with build type 'ament_python'
+[0.180s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur5e_description', 'ament_prefix_path')
+[0.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/hook/ament_prefix_path.ps1'
+[0.180s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/hook/ament_prefix_path.dsv'
+[0.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/hook/ament_prefix_path.sh'
+[0.180s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.180s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.326s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xiatenghui/work_space/mujoco_ws/src/flintrobot_description'
+[0.326s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.326s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.468s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_py'
+[0.468s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.468s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[0.623s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description'
+[0.623s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.623s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xiatenghui/work_space/mujoco_ws/src/flintrobot_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/flintrobot_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/install.log --single-version-externally-managed install_data
+[0.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_py': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mujoco_py build --build-base /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/build install --record /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/install.log --single-version-externally-managed install_data
+[0.993s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log --single-version-externally-managed install_data
+[1.326s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xiatenghui/work_space/mujoco_ws/src/ur5e_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur5e_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/ur5e_description/install.log --single-version-externally-managed install_data
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description' for CMake module files
+[1.328s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description' for CMake config files
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib'
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/bin'
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/pkgconfig/ur5e_description.pc'
+[1.329s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/lib/python3.12/site-packages'
+[1.329s] Level 1:colcon.colcon_core.shell:create_environment_hook('ur5e_description', 'pythonpath')
+[1.329s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/hook/pythonpath.ps1'
+[1.330s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/hook/pythonpath.dsv'
+[1.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/hook/pythonpath.sh'
+[1.330s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/bin'
+[1.330s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ur5e_description)
+[1.330s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/package.ps1'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/package.dsv'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/package.sh'
+[1.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/package.bash'
+[1.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/ur5e_description/package.zsh'
+[1.332s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description/share/colcon-core/packages/ur5e_description)
+[1.332s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py' for CMake module files
+[1.333s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py' for CMake config files
+[1.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_py' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mujoco_py build --build-base /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/build install --record /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/install.log --single-version-externally-managed install_data
+[1.334s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib'
+[1.334s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/bin'
+[1.334s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/pkgconfig/mujoco_py.pc'
+[1.334s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages'
+[1.334s] Level 1:colcon.colcon_core.shell:create_environment_hook('mujoco_py', 'pythonpath')
+[1.334s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/hook/pythonpath.ps1'
+[1.334s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/hook/pythonpath.dsv'
+[1.334s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/hook/pythonpath.sh'
+[1.335s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/bin'
+[1.335s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mujoco_py)
+[1.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/package.ps1'
+[1.335s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/package.dsv'
+[1.335s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/package.sh'
+[1.336s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/package.bash'
+[1.336s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/mujoco_py/package.zsh'
+[1.336s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/share/colcon-core/packages/mujoco_py)
+[1.338s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description' for CMake module files
+[1.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xiatenghui/work_space/mujoco_ws/src/flintrobot_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/flintrobot_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/install.log --single-version-externally-managed install_data
+[1.339s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description' for CMake config files
+[1.340s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib'
+[1.340s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/bin'
+[1.340s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/pkgconfig/flintrobot_description.pc'
+[1.340s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages'
+[1.340s] Level 1:colcon.colcon_core.shell:create_environment_hook('flintrobot_description', 'pythonpath')
+[1.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/hook/pythonpath.ps1'
+[1.340s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/hook/pythonpath.dsv'
+[1.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/hook/pythonpath.sh'
+[1.341s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/bin'
+[1.341s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(flintrobot_description)
+[1.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/package.ps1'
+[1.341s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/package.dsv'
+[1.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/package.sh'
+[1.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/package.bash'
+[1.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/package.zsh'
+[1.342s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/colcon-core/packages/flintrobot_description)
+[5.149s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim -- -j24 -l24
+[5.165s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim
+[5.189s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mujoco_sim)
+[5.189s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xiatenghui/work_space/mujoco_ws/install/ur5e_description:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description:/home/xiatenghui/moveit2_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/xiatenghui/work_space/mujoco_ws/build/mujoco_sim
+[5.189s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim' for CMake module files
+[5.190s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim' for CMake config files
+[5.190s] Level 1:colcon.colcon_core.shell:create_environment_hook('mujoco_sim', 'cmake_prefix_path')
+[5.190s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/hook/cmake_prefix_path.ps1'
+[5.190s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/hook/cmake_prefix_path.dsv'
+[5.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/hook/cmake_prefix_path.sh'
+[5.191s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib'
+[5.191s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/bin'
+[5.191s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/pkgconfig/mujoco_sim.pc'
+[5.191s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/python3.12/site-packages'
+[5.192s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/bin'
+[5.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.ps1'
+[5.192s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.dsv'
+[5.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.sh'
+[5.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.bash'
+[5.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.zsh'
+[5.193s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/colcon-core/packages/mujoco_sim)
+[5.193s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mujoco_sim)
+[5.194s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim' for CMake module files
+[5.194s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim' for CMake config files
+[5.194s] Level 1:colcon.colcon_core.shell:create_environment_hook('mujoco_sim', 'cmake_prefix_path')
+[5.194s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/hook/cmake_prefix_path.ps1'
+[5.194s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/hook/cmake_prefix_path.dsv'
+[5.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/hook/cmake_prefix_path.sh'
+[5.195s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib'
+[5.195s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/bin'
+[5.195s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/pkgconfig/mujoco_sim.pc'
+[5.195s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/lib/python3.12/site-packages'
+[5.195s] Level 1:colcon.colcon_core.environment:checking '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/bin'
+[5.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.ps1'
+[5.196s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.dsv'
+[5.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.sh'
+[5.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.bash'
+[5.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/mujoco_sim/package.zsh'
+[5.197s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xiatenghui/work_space/mujoco_ws/install/mujoco_sim/share/colcon-core/packages/mujoco_sim)
+[5.197s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.198s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.198s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.198s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.202s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.202s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.202s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.218s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.219s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xiatenghui/work_space/mujoco_ws/install/local_setup.ps1'
+[5.219s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xiatenghui/work_space/mujoco_ws/install/_local_setup_util_ps1.py'
+[5.220s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xiatenghui/work_space/mujoco_ws/install/setup.ps1'
+[5.221s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xiatenghui/work_space/mujoco_ws/install/local_setup.sh'
+[5.222s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xiatenghui/work_space/mujoco_ws/install/_local_setup_util_sh.py'
+[5.222s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xiatenghui/work_space/mujoco_ws/install/setup.sh'
+[5.223s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xiatenghui/work_space/mujoco_ws/install/local_setup.bash'
+[5.224s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xiatenghui/work_space/mujoco_ws/install/setup.bash'
+[5.225s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xiatenghui/work_space/mujoco_ws/install/local_setup.zsh'
+[5.225s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xiatenghui/work_space/mujoco_ws/install/setup.zsh'

@@ -1,0 +1,42 @@
+running egg_info
+writing ../../build/flintrobot_description/flintrobot_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/flintrobot_description/flintrobot_description.egg-info/dependency_links.txt
+writing requirements to ../../build/flintrobot_description/flintrobot_description.egg-info/requires.txt
+writing top-level names to ../../build/flintrobot_description/flintrobot_description.egg-info/top_level.txt
+reading manifest file '../../build/flintrobot_description/flintrobot_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/flintrobot_description/flintrobot_description.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying urdf/flintrobot.xml -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/urdf
+copying meshes/flint_head.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_neck_raise_const.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint4.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_wheel2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_hand_finger_joint1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_good_hand.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint8.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_wheel1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint6.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_hand_finger_joint0.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_hand_thumb_joint0.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_neck3.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_neck0.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_hand_thumb_joint1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint7.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_hand_thumb_joint2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_body.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_neck2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint3.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_hand_thumb_joint3.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_neck1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+copying meshes/flint_joint5.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+running install_egg_info
+removing '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages/flintrobot_description-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/flintrobot_description/flintrobot_description.egg-info to /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages/flintrobot_description-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/install.log'

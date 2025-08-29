@@ -1,0 +1,44 @@
+[0.825s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/src/flintrobot_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/flintrobot_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/install.log --single-version-externally-managed install_data
+[0.992s] running egg_info
+[1.003s] writing ../../build/flintrobot_description/flintrobot_description.egg-info/PKG-INFO
+[1.003s] writing dependency_links to ../../build/flintrobot_description/flintrobot_description.egg-info/dependency_links.txt
+[1.003s] writing requirements to ../../build/flintrobot_description/flintrobot_description.egg-info/requires.txt
+[1.003s] writing top-level names to ../../build/flintrobot_description/flintrobot_description.egg-info/top_level.txt
+[1.026s] reading manifest file '../../build/flintrobot_description/flintrobot_description.egg-info/SOURCES.txt'
+[1.027s] writing manifest file '../../build/flintrobot_description/flintrobot_description.egg-info/SOURCES.txt'
+[1.027s] running build
+[1.028s] running build_py
+[1.028s] running install
+[1.032s] running install_lib
+[1.043s] running install_data
+[1.044s] copying urdf/flintrobot.xml -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/urdf
+[1.044s] copying meshes/flint_head.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.048s] copying meshes/flint_neck_raise_const.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.048s] copying meshes/flint_joint4.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.048s] copying meshes/flint_wheel2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.048s] copying meshes/flint_joint2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.050s] copying meshes/flint_hand_finger_joint1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.050s] copying meshes/flint_joint1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.051s] copying meshes/flint_good_hand.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.051s] copying meshes/flint_joint8.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.051s] copying meshes/flint_wheel1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.051s] copying meshes/flint_joint6.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.052s] copying meshes/flint_hand_finger_joint0.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.052s] copying meshes/flint_hand_thumb_joint0.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.052s] copying meshes/flint_neck3.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.052s] copying meshes/flint_neck0.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.052s] copying meshes/flint_hand_thumb_joint1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.053s] copying meshes/flint_joint7.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.053s] copying meshes/flint_hand_thumb_joint2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.053s] copying meshes/flint_body.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.055s] copying meshes/flint_neck2.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.055s] copying meshes/flint_joint3.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.056s] copying meshes/flint_hand_thumb_joint3.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.056s] copying meshes/flint_neck1.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.056s] copying meshes/flint_joint5.stl -> /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/share/flintrobot_description/meshes
+[1.058s] running install_egg_info
+[1.071s] removing '/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages/flintrobot_description-0.0.0-py3.12.egg-info' (and everything under it)
+[1.071s] Copying ../../build/flintrobot_description/flintrobot_description.egg-info to /home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages/flintrobot_description-0.0.0-py3.12.egg-info
+[1.072s] running install_scripts
+[1.152s] writing list of installed files to '/home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/install.log'
+[1.173s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/src/flintrobot_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/flintrobot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/flintrobot_description build --build-base /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/build install --record /home/xiatenghui/work_space/mujoco_ws/build/flintrobot_description/install.log --single-version-externally-managed install_data

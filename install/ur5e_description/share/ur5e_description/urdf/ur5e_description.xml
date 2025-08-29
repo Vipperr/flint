@@ -1,0 +1,71 @@
+<mujoco model="ur5e_description">
+  <compiler angle="radian" meshdir="../meshes/"/>
+
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="link1" file="link1.STL"/>
+    <mesh name="link2" file="link2.STL"/>
+    <mesh name="link3" file="link3.STL"/>
+    <mesh name="link4" file="link4.STL"/>
+    <mesh name="link5" file="link5.STL"/>
+    <mesh name="link6" file="link6.STL"/>
+    <texture name="grid_tex" type="2d" builtin="checker" width="256" height="256" rgb1="0.2 0.2 0.2" rgb2="0.4 0.4 0.4"/>
+    <material name="grid_mat" texture="grid_tex" texrepeat="8 8"/>
+  </asset>
+  
+  <actuator>
+    <!-- 定义驱动关节的执行器 -->
+    <motor name="motor1" joint="joint1" ctrlrange="-100 100"/>
+    <motor name="motor2" joint="joint2" ctrlrange="-100 100"/>
+    <motor name="motor3" joint="joint3" ctrlrange="-100 100"/>
+    <motor name="motor4" joint="joint4" ctrlrange="-100 100"/>
+    <motor name="motor5" joint="joint5" ctrlrange="-100 100"/>
+    <motor name="motor6" joint="joint6" ctrlrange="-100 100"/>
+  </actuator>
+  
+  <sensor>
+    <!-- 添加关节力矩传感器 -->
+    <jointactuatorfrc name="sensor_joint1_torque" joint="joint1"/>
+    <jointactuatorfrc name="sensor_joint2_torque" joint="joint2"/>
+    <jointactuatorfrc name="sensor_joint3_torque" joint="joint3"/>
+    <jointactuatorfrc name="sensor_joint4_torque" joint="joint4"/>
+    <jointactuatorfrc name="sensor_joint5_torque" joint="joint5"/>
+    <jointactuatorfrc name="sensor_joint6_torque" joint="joint6"/>
+  </sensor>
+
+  <worldbody>
+    <geom name="floor" type="plane" size="10 10 0.1" material="grid_mat"/>
+    <light pos="0 0 5"/>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.69804 0.69804 0.69804 1" mesh="base_link"/>
+    <body name="link1" pos="0 0 0.1623">
+      <inertial pos="-3.5494e-07 -0.010911 0.00011705" quat="0.964845 0.262819 2.53211e-06 -4.29453e-05" mass="1.6078" diaginertia="0.0039246 0.00350352 0.00328688"/>
+      <joint name="joint1" pos="0 0 0" axis="0 0 -1" range="-3.14 3.14" actuatorfrcrange="-50 50" frictionloss="1.0" damping="0.2"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.69804 0.69804 0.69804 1" mesh="link1"/>
+      <body name="link2" pos="0 -0.1378 0" quat="0.499998 0.5 -0.5 0.500002">
+        <inertial pos="0.2125 1.6585e-06 0.00010918" quat="0.499944 0.500063 0.499936 0.500057" mass="3.4818" diaginertia="0.14143 0.14027 0.0074186"/>
+        <joint name="joint2" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" actuatorfrcrange="-50 50" frictionloss="1.0" damping="0.2"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.69804 0.69804 0.69804 1" mesh="link2"/>
+        <body name="link3" pos="0.425 0 0" quat="0.999984 0 0.00573597 0">
+          <inertial pos="0.17967 -9.4513e-06 -0.12413" quat="0.479481 0.52036 0.505409 0.493847" mass="3.7588" diaginertia="0.0683423 0.0679813 0.00373902"/>
+          <joint name="joint3" pos="0 0 0" axis="-0.011472 0 0.999934" range="-3.14 3.14" actuatorfrcrange="-50 50" frictionloss="1.0" damping="0.2"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.69804 0.69804 0.69804 1" mesh="link3"/>
+          <body name="link4" pos="0.39228 0 0" quat="0.707094 0.00405593 -0.00405595 -0.707096">
+            <inertial pos="7.9407e-06 -0.0025972 -0.018321" quat="0.997958 0.0638666 0.000329273 0.000202224" mass="0.65799" diaginertia="0.0010918 0.000887718 0.000682881"/>
+            <joint name="joint4" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" actuatorfrcrange="-50 50" frictionloss="1.0" damping="0.2"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.69804 0.69804 0.69804 1" mesh="link4"/>
+            <body name="link5" pos="0 0.0997 0" quat="0.707105 -0.707108 0 0">
+              <inertial pos="-8.7675e-06 0.0031539 -0.0076987" quat="0.683181 0.730248 -0.000695742 0.00103843" mass="0.54031" diaginertia="0.000698251 0.000604019 0.000491241"/>
+              <joint name="joint5" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" actuatorfrcrange="-50 50" frictionloss="1.0" damping="0.2"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.69804 0.69804 0.69804 1" mesh="link5"/>
+              <body name="link6" pos="0 -0.0996 -0.00049929" quat="0.707105 0.707108 0 0">
+                <inertial pos="1.1786e-09 0.0004813 -0.028276" quat="-0.00194028 0.707104 -0.00192227 0.707104" mass="0.21893" diaginertia="0.000150861 0.000121379 0.00012067"/>
+                <joint name="joint6" pos="0 0 0" axis="0 0 1" range="-3.14 3.14" actuatorfrcrange="-50 50" frictionloss="1.0" damping="0.2"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.69804 0.69804 0.69804 1" mesh="link6"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
