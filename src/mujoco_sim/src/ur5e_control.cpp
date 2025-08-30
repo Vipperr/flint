@@ -280,9 +280,9 @@ class Ur5e_Node : public rclcpp::Node
             PID_control(0, 20, 5);
             PID_control(1, 80, 20);
             PID_control(2, 60, 10);
-            PID_control(3, 40, 5);
-            PID_control(4, 20, 3);
-            PID_control(5, 10, 1.2);
+            PID_control(3, 30, 5);
+            PID_control(4, 8, 0);
+            PID_control(5, 5, 0);
 
             // RCLCPP_INFO(get_logger(), "force0 %f", data_->ctrl[joint_id_map[0]]);
             // RCLCPP_INFO(get_logger(), "force1 %f", data_->ctrl[joint_id_map[1]]);

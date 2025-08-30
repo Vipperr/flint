@@ -1,0 +1,24 @@
+[0.815s] Invoking command in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_py': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mujoco_py build --build-base /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/build install --record /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/install.log --single-version-externally-managed install_data
+[0.986s] running egg_info
+[0.998s] writing ../../build/mujoco_py/mujoco_py.egg-info/PKG-INFO
+[0.999s] writing dependency_links to ../../build/mujoco_py/mujoco_py.egg-info/dependency_links.txt
+[0.999s] writing entry points to ../../build/mujoco_py/mujoco_py.egg-info/entry_points.txt
+[0.999s] writing requirements to ../../build/mujoco_py/mujoco_py.egg-info/requires.txt
+[0.999s] writing top-level names to ../../build/mujoco_py/mujoco_py.egg-info/top_level.txt
+[1.021s] reading manifest file '../../build/mujoco_py/mujoco_py.egg-info/SOURCES.txt'
+[1.022s] writing manifest file '../../build/mujoco_py/mujoco_py.egg-info/SOURCES.txt'
+[1.022s] running build
+[1.022s] running build_py
+[1.022s] copying mujoco_py/data_collection_ur5e.py -> /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/build/lib/mujoco_py
+[1.022s] running install
+[1.026s] running install_lib
+[1.038s] copying /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/build/lib/mujoco_py/data_collection_ur5e.py -> /home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages/mujoco_py
+[1.039s] byte-compiling /home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages/mujoco_py/data_collection_ur5e.py to data_collection_ur5e.cpython-312.pyc
+[1.039s] running install_data
+[1.040s] running install_egg_info
+[1.052s] removing '/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages/mujoco_py-0.0.0-py3.12.egg-info' (and everything under it)
+[1.052s] Copying ../../build/mujoco_py/mujoco_py.egg-info to /home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages/mujoco_py-0.0.0-py3.12.egg-info
+[1.052s] running install_scripts
+[1.131s] Installing data_collection_ur5e script to /home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/mujoco_py
+[1.131s] writing list of installed files to '/home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/install.log'
+[1.156s] Invoked command in '/home/xiatenghui/work_space/mujoco_ws/src/mujoco_py' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/xiatenghui/work_space/mujoco_ws/install/mujoco_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mujoco_py build --build-base /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/build install --record /home/xiatenghui/work_space/mujoco_ws/build/mujoco_py/install.log --single-version-externally-managed install_data
